@@ -1,0 +1,4 @@
+﻿method,cells,mean_auc,sd_auc,mean_prauc,mean_prev,cells_auc_above_half
+tadgan_max,15,0.559577,0.277929,0.585412,0.476337,8
+tadgan_mean,15,0.520035,0.312334,0.549057,0.476337,8
+time_index,15,0.427486,0.301023,0.486801,0.476337,3

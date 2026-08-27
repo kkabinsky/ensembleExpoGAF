@@ -1,0 +1,17 @@
+__pycache__/
+*.pyc
+*.aux
+*.log
+*.out
+*.tex
+*.synctex.gz
+verify_all.csv
+
+# Directories the programs write into when run.
+# The reference tables the manuscript quotes are tracked under outputs/.
+output_supplementary/
+output_far_matched/
+output_window_check/
+Iran_new_run/test_ablation/output/
+test_cnn/output/
+Iran_new_run/run_pr_auc/*.csv

@@ -1,0 +1,13 @@
+episode,asset,n_windows,n_positive,lag1_score_corr,n_eff_overlap,n_eff_autocorr
+COVID-19,USOIL,146,73,0.865,4.6,10.5
+COVID-19,GOLD,146,73,0.922,4.6,5.9
+COVID-19,EURUSD,152,74,0.887,4.8,9.1
+Russia-Ukraine,USOIL,125,65,0.933,3.9,4.4
+Russia-Ukraine,GOLD,125,65,0.874,3.9,8.4
+Russia-Ukraine,EURUSD,130,66,0.909,4.1,6.2
+Chinese real estate,USOIL,147,70,0.857,4.6,11.3
+Chinese real estate,GOLD,147,70,0.83,4.6,13.6
+Chinese real estate,EURUSD,152,71,0.893,4.8,8.6
+Iran 2025,USOIL,106,40,0.84,3.3,9.2
+Iran 2025,GOLD,106,40,0.939,3.3,3.4
+Iran 2025,EURUSD,107,41,0.836,3.3,9.5
