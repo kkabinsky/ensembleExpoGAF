@@ -9,7 +9,7 @@ with this repository.
 | Program | Result files | Manuscript |
 |---|---|---|
 | `test_cnn/cnn_window_sweep.py` | `cnn_window_sweep.csv` | Table 4, upper panel: window lengths 16, 32 and 64 under the supervised classifier |
-| `Iran_new_run/window_size_check.py` | `window_sweep.log` | Table 4, lower panel: the same sweep under the one-class scorer |
+| `Iran_new_run/window_size_check.py` | `outputs/window_check_exponential.csv` | Table 4, lower panel: the same sweep under the one-class scorer |
 | `encoding_ablation/mapping_geometry.py` | `encoding_ablation/output/mapping_geometry.csv` | Table 5: angular range, fold fraction, the derivative at both ends of the window range, and the ratio of between- to within-class spread |
 | `encoding_ablation/mapping_derivation.py` | *(prints to console)* | The closed-form derivation behind Table 5, each constant printed beside its numerical check |
 | `Iran_new_run/run_pr_auc/pr_auc_all_datasets_new.py` | `pr_auc_all_cells_new.csv`<br>`pr_auc_summary_by_method_new.csv`<br>`pr_auc_ens_where_best_new.csv` | Table 6: average precision for ten methods on fifteen asset-episode cells, with the random-ordering reference |

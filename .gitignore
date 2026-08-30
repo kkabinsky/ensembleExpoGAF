@@ -2,12 +2,6 @@ __pycache__/
 *.pyc
 *.aux
 *.log
-# but a run log that carries a result the manuscript quotes is a result, not a
-# build artefact; Table 4's lower panel is read off window_sweep.log
-!outputs/window_sweep.log
-!encoding_ablation/output/run_full.log
-!encoding_ablation/output/run_budget.log
-!encoding_ablation/output/run_lambda.log
 *.out
 *.tex
 # but the LaTeX table a program writes as its result is a result, not a
