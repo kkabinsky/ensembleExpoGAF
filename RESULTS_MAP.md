@@ -34,7 +34,7 @@ with this repository.
 | `sensitivity_runs/threshold_sweep.py` | `sensitivity_runs/output/threshold_sweep.csv` | Eight alarm quantiles from 0.70 to 0.99; the leading detector changes across the range |
 | `sensitivity_runs/seed_variability.py` | `sensitivity_runs/output/seed_variability.csv` | Three seeds per cell; within-cell spread of 0.059 in AUC and a range up to 0.258 |
 | `sensitivity_runs/overlap_check.py` | `sensitivity_runs/output/overlap_check.csv` | About four independent observations per cell under the 32-window overlap |
-| `sensitivity_runs/overlap_corrected_tests.py` | `sensitivity_runs/output/overlap_corrected_tests.csv` | Block-bootstrap intervals that respect the overlap: 0.254 wide against a 0.189 spread between detectors |
+| `sensitivity_runs/overlap_corrected_tests.py` | `sensitivity_runs/output/overlap_corrected_tests.csv` | Block-bootstrap intervals that respect the overlap: 0.254 wide against a 0.189 spread between detectors. The deposited file was produced with `--replicates 400`; the program's default of 2000 gives 0.253 for the same quantity and leaves every AUC unchanged, so the comparison the paper draws from it does not depend on the setting |
 | `sensitivity_runs/lstm_ablation.py` | `sensitivity_runs/output/lstm_ablation.csv`<br>`sensitivity_runs/output/lstm_structural_check.csv` | The recurrent layer receives a sequence of length one, so it carries no state between timesteps |
 | `encoding_ablation/run_ablation.py` | `encoding_ablation/output/ablation_results_e5.csv`<br>`encoding_ablation/output/ablation_results_full.csv` | The six-arm encoding ablation |
 | `encoding_ablation/budget_sweep.py` | `encoding_ablation/output/budget_sweep_classifier.csv` | Whether the mapping ordering depends on the training budget |
