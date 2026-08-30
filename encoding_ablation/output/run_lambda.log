@@ -1,0 +1,165 @@
+variant compact   epochs 20   seeds 3   weights [2.0, 10.0]   96 cells
+image contrast by mapping: cosine 0.464, arctan 0.244, arccosh 0.421, exponential 0.626
+prediction: if the penalty is what flattens the mappings, the exponential
+map should rank higher at the lower weight than at 10
+
+lambda 2.0   cosine       COVID-19         seed 0   AUC 0.7261   [1/96  2 min]
+lambda 2.0   cosine       COVID-19         seed 1   AUC 0.7147   [2/96  5 min]
+lambda 2.0   cosine       COVID-19         seed 2   AUC 0.7216   [3/96  8 min]
+lambda 2.0   cosine       Russia-Ukraine   seed 0   AUC 0.5636   [4/96  10 min]
+lambda 2.0   cosine       Russia-Ukraine   seed 1   AUC 0.5519   [5/96  13 min]
+lambda 2.0   cosine       Russia-Ukraine   seed 2   AUC 0.5602   [6/96  15 min]
+lambda 2.0   cosine       Chinese          seed 0   AUC 0.4514   [7/96  17 min]
+lambda 2.0   cosine       Chinese          seed 1   AUC 0.4615   [8/96  19 min]
+lambda 2.0   cosine       Chinese          seed 2   AUC 0.4657   [9/96  21 min]
+lambda 2.0   cosine       Iran 2025        seed 0   AUC 0.4734   [10/96  23 min]
+lambda 2.0   cosine       Iran 2025        seed 1   AUC 0.4476   [11/96  25 min]
+lambda 2.0   cosine       Iran 2025        seed 2   AUC 0.4502   [12/96  27 min]
+lambda 2.0   arctan       COVID-19         seed 0   AUC 0.7267   [13/96  30 min]
+lambda 2.0   arctan       COVID-19         seed 1   AUC 0.4862   [14/96  32 min]
+lambda 2.0   arctan       COVID-19         seed 2   AUC 0.5436   [15/96  34 min]
+lambda 2.0   arctan       Russia-Ukraine   seed 0   AUC 0.6826   [16/96  36 min]
+lambda 2.0   arctan       Russia-Ukraine   seed 1   AUC 0.5930   [17/96  39 min]
+lambda 2.0   arctan       Russia-Ukraine   seed 2   AUC 0.5248   [18/96  42 min]
+lambda 2.0   arctan       Chinese          seed 0   AUC 0.5758   [19/96  44 min]
+lambda 2.0   arctan       Chinese          seed 1   AUC 0.4688   [20/96  46 min]
+lambda 2.0   arctan       Chinese          seed 2   AUC 0.5487   [21/96  48 min]
+lambda 2.0   arctan       Iran 2025        seed 0   AUC 0.4180   [22/96  51 min]
+lambda 2.0   arctan       Iran 2025        seed 1   AUC 0.5237   [23/96  53 min]
+lambda 2.0   arctan       Iran 2025        seed 2   AUC 0.5075   [24/96  55 min]
+lambda 2.0   arccosh      COVID-19         seed 0   AUC 0.7828   [25/96  57 min]
+lambda 2.0   arccosh      COVID-19         seed 1   AUC 0.7407   [26/96  58 min]
+lambda 2.0   arccosh      COVID-19         seed 2   AUC 0.7555   [27/96  60 min]
+lambda 2.0   arccosh      Russia-Ukraine   seed 0   AUC 0.5353   [28/96  62 min]
+lambda 2.0   arccosh      Russia-Ukraine   seed 1   AUC 0.5641   [29/96  64 min]
+lambda 2.0   arccosh      Russia-Ukraine   seed 2   AUC 0.5546   [30/96  66 min]
+lambda 2.0   arccosh      Chinese          seed 0   AUC 0.4879   [31/96  68 min]
+lambda 2.0   arccosh      Chinese          seed 1   AUC 0.4013   [32/96  70 min]
+lambda 2.0   arccosh      Chinese          seed 2   AUC 0.4224   [33/96  72 min]
+lambda 2.0   arccosh      Iran 2025        seed 0   AUC 0.4254   [34/96  74 min]
+lambda 2.0   arccosh      Iran 2025        seed 1   AUC 0.4362   [35/96  76 min]
+lambda 2.0   arccosh      Iran 2025        seed 2   AUC 0.4210   [36/96  78 min]
+lambda 2.0   exponential  COVID-19         seed 0   AUC 0.6997   [37/96  79 min]
+lambda 2.0   exponential  COVID-19         seed 1   AUC 0.6603   [38/96  81 min]
+lambda 2.0   exponential  COVID-19         seed 2   AUC 0.6768   [39/96  83 min]
+lambda 2.0   exponential  Russia-Ukraine   seed 0   AUC 0.5728   [40/96  85 min]
+lambda 2.0   exponential  Russia-Ukraine   seed 1   AUC 0.5813   [41/96  87 min]
+lambda 2.0   exponential  Russia-Ukraine   seed 2   AUC 0.5576   [42/96  89 min]
+lambda 2.0   exponential  Chinese          seed 0   AUC 0.4081   [43/96  91 min]
+lambda 2.0   exponential  Chinese          seed 1   AUC 0.3947   [44/96  92 min]
+lambda 2.0   exponential  Chinese          seed 2   AUC 0.4008   [45/96  94 min]
+lambda 2.0   exponential  Iran 2025        seed 0   AUC 0.5452   [46/96  96 min]
+lambda 2.0   exponential  Iran 2025        seed 1   AUC 0.5423   [47/96  98 min]
+lambda 2.0   exponential  Iran 2025        seed 2   AUC 0.5442   [48/96  100 min]
+lambda 10.0  cosine       COVID-19         seed 0   AUC 0.7162   [49/96  102 min]
+lambda 10.0  cosine       COVID-19         seed 1   AUC 0.7127   [50/96  103 min]
+lambda 10.0  cosine       COVID-19         seed 2   AUC 0.7200   [51/96  105 min]
+lambda 10.0  cosine       Russia-Ukraine   seed 0   AUC 0.5454   [52/96  107 min]
+lambda 10.0  cosine       Russia-Ukraine   seed 1   AUC 0.5459   [53/96  110 min]
+lambda 10.0  cosine       Russia-Ukraine   seed 2   AUC 0.5583   [54/96  112 min]
+lambda 10.0  cosine       Chinese          seed 0   AUC 0.4267   [55/96  114 min]
+lambda 10.0  cosine       Chinese          seed 1   AUC 0.4462   [56/96  117 min]
+lambda 10.0  cosine       Chinese          seed 2   AUC 0.4466   [57/96  119 min]
+lambda 10.0  cosine       Iran 2025        seed 0   AUC 0.4628   [58/96  121 min]
+lambda 10.0  cosine       Iran 2025        seed 1   AUC 0.4390   [59/96  123 min]
+lambda 10.0  cosine       Iran 2025        seed 2   AUC 0.4387   [60/96  125 min]
+lambda 10.0  arctan       COVID-19         seed 0   AUC 0.6874   [61/96  127 min]
+lambda 10.0  arctan       COVID-19         seed 1   AUC 0.5190   [62/96  129 min]
+lambda 10.0  arctan       COVID-19         seed 2   AUC 0.5585   [63/96  131 min]
+lambda 10.0  arctan       Russia-Ukraine   seed 0   AUC 0.6648   [64/96  132 min]
+lambda 10.0  arctan       Russia-Ukraine   seed 1   AUC 0.5871   [65/96  134 min]
+found 65 earlier rows; continuing
+variant compact   epochs 20   seeds 3   weights [2.0, 10.0]   96 cells
+image contrast by mapping: cosine 0.464, arctan 0.244, arccosh 0.421, exponential 0.626
+prediction: if the penalty is what flattens the mappings, the exponential
+map should rank higher at the lower weight than at 10
+
+lambda 10.0  arctan       Russia-Ukraine   seed 2   AUC 0.5309   [66/96  1 min]
+lambda 10.0  arctan       Chinese          seed 0   AUC 0.4997   [67/96  1 min]
+lambda 10.0  arctan       Chinese          seed 1   AUC 0.4381   [68/96  2 min]
+lambda 10.0  arctan       Chinese          seed 2   AUC 0.5405   [69/96  3 min]
+lambda 10.0  arctan       Iran 2025        seed 0   AUC 0.4834   [70/96  3 min]
+lambda 10.0  arctan       Iran 2025        seed 1   AUC 0.5267   [71/96  4 min]
+lambda 10.0  arctan       Iran 2025        seed 2   AUC 0.4969   [72/96  5 min]
+lambda 10.0  arccosh      COVID-19         seed 0   AUC 0.7887   [73/96  5 min]
+lambda 10.0  arccosh      COVID-19         seed 1   AUC 0.7350   [74/96  6 min]
+lambda 10.0  arccosh      COVID-19         seed 2   AUC 0.7615   [75/96  6 min]
+lambda 10.0  arccosh      Russia-Ukraine   seed 0   AUC 0.5316   [76/96  7 min]
+lambda 10.0  arccosh      Russia-Ukraine   seed 1   AUC 0.5645   [77/96  8 min]
+lambda 10.0  arccosh      Russia-Ukraine   seed 2   AUC 0.5514   [78/96  9 min]
+lambda 10.0  arccosh      Chinese          seed 0   AUC 0.4879   [79/96  10 min]
+lambda 10.0  arccosh      Chinese          seed 1   AUC 0.4007   [80/96  10 min]
+lambda 10.0  arccosh      Chinese          seed 2   AUC 0.4459   [81/96  11 min]
+lambda 10.0  arccosh      Iran 2025        seed 0   AUC 0.4232   [82/96  11 min]
+lambda 10.0  arccosh      Iran 2025        seed 1   AUC 0.4361   [83/96  12 min]
+lambda 10.0  arccosh      Iran 2025        seed 2   AUC 0.4380   [84/96  12 min]
+lambda 10.0  exponential  COVID-19         seed 0   AUC 0.6888   [85/96  13 min]
+lambda 10.0  exponential  COVID-19         seed 1   AUC 0.6530   [86/96  14 min]
+lambda 10.0  exponential  COVID-19         seed 2   AUC 0.6720   [87/96  15 min]
+lambda 10.0  exponential  Russia-Ukraine   seed 0   AUC 0.5642   [88/96  16 min]
+lambda 10.0  exponential  Russia-Ukraine   seed 1   AUC 0.5777   [89/96  17 min]
+lambda 10.0  exponential  Russia-Ukraine   seed 2   AUC 0.5550   [90/96  17 min]
+lambda 10.0  exponential  Chinese          seed 0   AUC 0.3958   [91/96  18 min]
+lambda 10.0  exponential  Chinese          seed 1   AUC 0.3926   [92/96  19 min]
+lambda 10.0  exponential  Chinese          seed 2   AUC 0.3952   [93/96  20 min]
+lambda 10.0  exponential  Iran 2025        seed 0   AUC 0.5419   [94/96  21 min]
+lambda 10.0  exponential  Iran 2025        seed 1   AUC 0.5414   [95/96  22 min]
+lambda 10.0  exponential  Iran 2025        seed 2   AUC 0.5448   [96/96  23 min]
+
+==================================================================================
+Mean AUC by gradient penalty weight and mapping
+==================================================================================
+mapping    cosine  arctan  arccosh  exponential     best  exp_rank
+lambda_gp                                                         
+2.0        0.5490  0.5499   0.5439       0.5486   arctan         3
+10.0       0.5382  0.5444   0.5470       0.5435  arccosh         3
+
+==================================================================================
+Does the ordering follow the image contrast at each weight?
+==================================================================================
+lambda       exp rank lead over 2nd  spearman with  seed spread
+                                         contrast             
+2.0                 3       0.0010         -0.400       0.0300
+10.0                3       0.0026         -0.600       0.0246
+
+How to read this
+  The prediction was that lowering the weight lets the mappings
+  separate again and moves the exponential map up. Compare the
+  exponential rank and the correlation with contrast between the
+  two rows, and compare the lead against the seed spread in the
+  same row before calling any of it a difference.
+
+Output file D:\tadgan_gaf\exponential_gaf\encoding_ablation\output\lambda_sweep_compact.csv
+LAMBDA_DONE
+found 96 earlier rows; continuing
+variant compact   epochs 20   seeds 3   weights [2.0, 10.0]   96 cells
+image contrast by mapping: cosine 0.464, arctan 0.244, arccosh 0.421, exponential 0.626
+prediction: if the penalty is what flattens the mappings, the exponential
+map should rank higher at the lower weight than at 10
+
+
+==================================================================================
+Mean AUC by gradient penalty weight and mapping
+==================================================================================
+mapping    cosine  arctan  arccosh  exponential     best  exp_rank
+lambda_gp                                                         
+2.0        0.5490  0.5499   0.5439       0.5486   arctan         3
+10.0       0.5382  0.5444   0.5470       0.5435  arccosh         3
+
+==================================================================================
+Does the ordering follow the image contrast at each weight?
+==================================================================================
+lambda       exp rank lead over 2nd  spearman with  seed spread
+                                         contrast             
+2.0                 3       0.0010         -0.400       0.0300
+10.0                3       0.0026         -0.600       0.0246
+
+How to read this
+  The prediction was that lowering the weight lets the mappings
+  separate again and moves the exponential map up. Compare the
+  exponential rank and the correlation with contrast between the
+  two rows, and compare the lead against the seed spread in the
+  same row before calling any of it a difference.
+
+Output file D:\tadgan_gaf\exponential_gaf\encoding_ablation\output\lambda_sweep_compact.csv
+LAMBDA_DONE

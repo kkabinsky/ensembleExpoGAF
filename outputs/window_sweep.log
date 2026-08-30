@@ -1,0 +1,753 @@
+[INFO] Device: cpu
+อุปกรณ์ cpu   ภาพ 32x32 คงที่ทุกกรณี   งานทั้งหมด 27 ช่อง
+epoch 10  batch 32  n_critic 2
+
+covid     USOIL   หน้าต่าง 16   เทรน 983  ทดสอบ 146  positive 0.397  ตัวอย่างอิสระราว 9.1
+    [GAN] epoch 001/10 D=-19.6869 G=15.5571
+    [GAN] epoch 002/10 D=-20.4667 G=14.8122
+    [GAN] epoch 003/10 D=-17.1945 G=13.0697
+    [GAN] epoch 004/10 D=-15.4354 G=12.8664
+    [GAN] epoch 005/10 D=-14.5520 G=12.2582
+    [GAN] epoch 006/10 D=-11.9145 G=11.0131
+    [GAN] epoch 007/10 D=-6.0730 G=10.9266
+    [GAN] epoch 008/10 D=-4.4623 G=14.1686
+    [GAN] epoch 009/10 D=-3.1800 G=14.3279
+    [GAN] epoch 010/10 D=-2.6073 G=15.9132
+    [ENC] epoch 001/10 loss=0.224575
+    [ENC] epoch 002/10 loss=0.160440
+    [ENC] epoch 003/10 loss=0.136492
+    [ENC] epoch 004/10 loss=0.131674
+    [ENC] epoch 005/10 loss=0.122081
+    [ENC] epoch 006/10 loss=0.117430
+    [ENC] epoch 007/10 loss=0.115576
+    [ENC] epoch 008/10 loss=0.111955
+    [ENC] epoch 009/10 loss=0.110545
+    [ENC] epoch 010/10 loss=0.106343
+    seed 0 -> AUC 0.6667  PR-AUC 0.6408   [1/27  8 นาที]
+covid     USOIL   หน้าต่าง 32   เทรน 983  ทดสอบ 146  positive 0.507  ตัวอย่างอิสระราว 4.6
+    [GAN] epoch 001/10 D=-18.9340 G=15.9822
+    [GAN] epoch 002/10 D=-20.7553 G=16.0368
+    [GAN] epoch 003/10 D=-17.2706 G=13.1162
+    [GAN] epoch 004/10 D=-16.4571 G=14.3685
+    [GAN] epoch 005/10 D=-14.8770 G=14.4961
+    [GAN] epoch 006/10 D=-13.8345 G=12.5177
+    [GAN] epoch 007/10 D=-13.6066 G=12.3531
+    [GAN] epoch 008/10 D=-12.1293 G=10.3961
+    [GAN] epoch 009/10 D=-9.2188 G=9.0605
+    [GAN] epoch 010/10 D=-5.3766 G=7.9626
+    [ENC] epoch 001/10 loss=0.265128
+    [ENC] epoch 002/10 loss=0.206983
+    [ENC] epoch 003/10 loss=0.187589
+    [ENC] epoch 004/10 loss=0.184310
+    [ENC] epoch 005/10 loss=0.173602
+    [ENC] epoch 006/10 loss=0.173359
+    [ENC] epoch 007/10 loss=0.164775
+    [ENC] epoch 008/10 loss=0.164008
+    [ENC] epoch 009/10 loss=0.162789
+    [ENC] epoch 010/10 loss=0.159417
+    seed 0 -> AUC 0.5428  PR-AUC 0.5834   [2/27  14 นาที]
+covid     USOIL   หน้าต่าง 64   เทรน 974  ทดสอบ 146  positive 0.664  ตัวอย่างอิสระราว 2.3
+    [GAN] epoch 001/10 D=-18.8562 G=17.0275
+    [GAN] epoch 002/10 D=-22.4116 G=15.5843
+    [GAN] epoch 003/10 D=-19.5883 G=15.5662
+    [GAN] epoch 004/10 D=-16.5659 G=15.3892
+    [GAN] epoch 005/10 D=-13.9986 G=14.0653
+    [GAN] epoch 006/10 D=-13.4964 G=12.6281
+    [GAN] epoch 007/10 D=-11.4233 G=10.5927
+    [GAN] epoch 008/10 D=-5.4396 G=8.2782
+    [GAN] epoch 009/10 D=-4.2756 G=11.1159
+    [GAN] epoch 010/10 D=-2.8538 G=11.2249
+    [ENC] epoch 001/10 loss=0.214002
+    [ENC] epoch 002/10 loss=0.155580
+    [ENC] epoch 003/10 loss=0.148240
+    [ENC] epoch 004/10 loss=0.138528
+    [ENC] epoch 005/10 loss=0.135384
+    [ENC] epoch 006/10 loss=0.134087
+    [ENC] epoch 007/10 loss=0.127617
+    [ENC] epoch 008/10 loss=0.127363
+    [ENC] epoch 009/10 loss=0.124893
+    [ENC] epoch 010/10 loss=0.124374
+    seed 0 -> AUC 0.2994  PR-AUC 0.6357   [3/27  19 นาที]
+covid     GOLD    หน้าต่าง 16   เทรน 982  ทดสอบ 146  positive 0.397  ตัวอย่างอิสระราว 9.1
+    [GAN] epoch 001/10 D=-19.6109 G=15.6689
+    [GAN] epoch 002/10 D=-19.0369 G=14.0463
+    [GAN] epoch 003/10 D=-16.0430 G=11.5373
+    [GAN] epoch 004/10 D=-14.9787 G=12.7574
+    [GAN] epoch 005/10 D=-14.7781 G=12.1575
+    [GAN] epoch 006/10 D=-14.5825 G=11.6562
+    [GAN] epoch 007/10 D=-14.3846 G=12.4899
+    [GAN] epoch 008/10 D=-12.7346 G=11.9041
+    [GAN] epoch 009/10 D=-6.2960 G=11.7890
+    [GAN] epoch 010/10 D=-3.3730 G=16.0854
+    [ENC] epoch 001/10 loss=0.247803
+    [ENC] epoch 002/10 loss=0.180640
+    [ENC] epoch 003/10 loss=0.162392
+    [ENC] epoch 004/10 loss=0.153720
+    [ENC] epoch 005/10 loss=0.146731
+    [ENC] epoch 006/10 loss=0.135803
+    [ENC] epoch 007/10 loss=0.136203
+    [ENC] epoch 008/10 loss=0.135831
+    [ENC] epoch 009/10 loss=0.129256
+    [ENC] epoch 010/10 loss=0.126470
+    seed 0 -> AUC 0.5770  PR-AUC 0.5157   [4/27  23 นาที]
+covid     GOLD    หน้าต่าง 32   เทรน 982  ทดสอบ 146  positive 0.507  ตัวอย่างอิสระราว 4.6
+    [GAN] epoch 001/10 D=-18.3082 G=14.8725
+    [GAN] epoch 002/10 D=-18.5115 G=15.4304
+    [GAN] epoch 003/10 D=-16.0970 G=12.4377
+    [GAN] epoch 004/10 D=-14.8739 G=13.4059
+    [GAN] epoch 005/10 D=-12.7390 G=12.3552
+    [GAN] epoch 006/10 D=-6.3969 G=10.4968
+    [GAN] epoch 007/10 D=-4.5932 G=14.9491
+    [GAN] epoch 008/10 D=-3.6496 G=12.7387
+    [GAN] epoch 009/10 D=-2.9050 G=15.3882
+    [GAN] epoch 010/10 D=-2.6025 G=16.4622
+    [ENC] epoch 001/10 loss=0.268286
+    [ENC] epoch 002/10 loss=0.206866
+    [ENC] epoch 003/10 loss=0.193379
+    [ENC] epoch 004/10 loss=0.188439
+    [ENC] epoch 005/10 loss=0.177346
+    [ENC] epoch 006/10 loss=0.175136
+    [ENC] epoch 007/10 loss=0.173734
+    [ENC] epoch 008/10 loss=0.173594
+    [ENC] epoch 009/10 loss=0.166868
+    [ENC] epoch 010/10 loss=0.165313
+    seed 0 -> AUC 0.7924  PR-AUC 0.7929   [5/27  29 นาที]
+covid     GOLD    หน้าต่าง 64   เทรน 973  ทดสอบ 146  positive 0.664  ตัวอย่างอิสระราว 2.3
+    [GAN] epoch 001/10 D=-19.0594 G=16.4115
+    [GAN] epoch 002/10 D=-20.6730 G=16.1699
+    [GAN] epoch 003/10 D=-17.2172 G=13.3786
+    [GAN] epoch 004/10 D=-15.6396 G=13.4443
+    [GAN] epoch 005/10 D=-15.0227 G=13.2683
+    [GAN] epoch 006/10 D=-14.7917 G=13.6005
+    [GAN] epoch 007/10 D=-13.1937 G=11.1309
+    [GAN] epoch 008/10 D=-6.7860 G=9.4023
+    [GAN] epoch 009/10 D=-4.4321 G=13.1452
+    [GAN] epoch 010/10 D=-3.1468 G=14.1360
+    [ENC] epoch 001/10 loss=0.237818
+    [ENC] epoch 002/10 loss=0.183568
+    [ENC] epoch 003/10 loss=0.172520
+    [ENC] epoch 004/10 loss=0.161778
+    [ENC] epoch 005/10 loss=0.158782
+    [ENC] epoch 006/10 loss=0.155902
+    [ENC] epoch 007/10 loss=0.145552
+    [ENC] epoch 008/10 loss=0.147243
+    [ENC] epoch 009/10 loss=0.142946
+    [ENC] epoch 010/10 loss=0.143896
+    seed 0 -> AUC 0.8879  PR-AUC 0.9454   [6/27  33 นาที]
+covid     EURUSD  หน้าต่าง 16   เทรน 1018  ทดสอบ 152  positive 0.388  ตัวอย่างอิสระราว 9.5
+    [GAN] epoch 001/10 D=-19.2923 G=15.7650
+    [GAN] epoch 002/10 D=-18.1881 G=13.7747
+    [GAN] epoch 003/10 D=-14.2921 G=9.7435
+    [GAN] epoch 004/10 D=-12.8374 G=11.1661
+    [GAN] epoch 005/10 D=-12.6879 G=9.7832
+    [GAN] epoch 006/10 D=-12.2860 G=10.1290
+    [GAN] epoch 007/10 D=-12.1330 G=11.2373
+    [GAN] epoch 008/10 D=-11.9317 G=10.9233
+    [GAN] epoch 009/10 D=-11.8283 G=9.6320
+    [GAN] epoch 010/10 D=-7.6096 G=8.8044
+    [ENC] epoch 001/10 loss=0.288734
+    [ENC] epoch 002/10 loss=0.208855
+    [ENC] epoch 003/10 loss=0.188374
+    [ENC] epoch 004/10 loss=0.168298
+    [ENC] epoch 005/10 loss=0.159483
+    [ENC] epoch 006/10 loss=0.150010
+    [ENC] epoch 007/10 loss=0.155394
+    [ENC] epoch 008/10 loss=0.142794
+    [ENC] epoch 009/10 loss=0.143624
+    [ENC] epoch 010/10 loss=0.140431
+    seed 0 -> AUC 0.3734  PR-AUC 0.3328   [7/27  38 นาที]
+covid     EURUSD  หน้าต่าง 32   เทรน 1018  ทดสอบ 152  positive 0.493  ตัวอย่างอิสระราว 4.8
+    [GAN] epoch 001/10 D=-18.2564 G=15.2896
+    [GAN] epoch 002/10 D=-18.6382 G=15.2238
+    [GAN] epoch 003/10 D=-16.2372 G=12.5026
+    [GAN] epoch 004/10 D=-15.0506 G=13.7723
+    [GAN] epoch 005/10 D=-14.0516 G=12.8025
+    [GAN] epoch 006/10 D=-10.1980 G=11.5918
+    [GAN] epoch 007/10 D=-5.1694 G=11.4085
+    [GAN] epoch 008/10 D=-4.0433 G=13.7003
+    [GAN] epoch 009/10 D=-3.1138 G=15.9053
+    [GAN] epoch 010/10 D=-2.8559 G=15.8748
+    [ENC] epoch 001/10 loss=0.282968
+    [ENC] epoch 002/10 loss=0.218063
+    [ENC] epoch 003/10 loss=0.200318
+    [ENC] epoch 004/10 loss=0.192136
+    [ENC] epoch 005/10 loss=0.187954
+    [ENC] epoch 006/10 loss=0.181437
+    [ENC] epoch 007/10 loss=0.179881
+    [ENC] epoch 008/10 loss=0.173965
+    [ENC] epoch 009/10 loss=0.170825
+    [ENC] epoch 010/10 loss=0.172482
+    seed 0 -> AUC 0.6535  PR-AUC 0.5920   [8/27  43 นาที]
+covid     EURUSD  หน้าต่าง 64   เทรน 1013  ทดสอบ 152  positive 0.671  ตัวอย่างอิสระราว 2.4
+    [GAN] epoch 001/10 D=-18.8072 G=16.7996
+    [GAN] epoch 002/10 D=-21.0945 G=17.5389
+    [GAN] epoch 003/10 D=-19.5997 G=15.3157
+    [GAN] epoch 004/10 D=-17.4219 G=16.6182
+    [GAN] epoch 005/10 D=-15.4728 G=15.2581
+    [GAN] epoch 006/10 D=-15.1367 G=15.5915
+    [GAN] epoch 007/10 D=-15.0599 G=13.8840
+    [GAN] epoch 008/10 D=-15.0161 G=14.3310
+    [GAN] epoch 009/10 D=-14.6998 G=12.4262
+    [GAN] epoch 010/10 D=-12.0275 G=11.9641
+    [ENC] epoch 001/10 loss=0.365980
+    [ENC] epoch 002/10 loss=0.310626
+    [ENC] epoch 003/10 loss=0.300831
+    [ENC] epoch 004/10 loss=0.291104
+    [ENC] epoch 005/10 loss=0.289544
+    [ENC] epoch 006/10 loss=0.280698
+    [ENC] epoch 007/10 loss=0.283885
+    [ENC] epoch 008/10 loss=0.280706
+    [ENC] epoch 009/10 loss=0.278523
+    [ENC] epoch 010/10 loss=0.277368
+    seed 0 -> AUC 0.8204  PR-AUC 0.9212   [9/27  47 นาที]
+russia    USOIL   หน้าต่าง 16   เทรน 1487  ทดสอบ 125  positive 0.400  ตัวอย่างอิสระราว 7.8
+    [GAN] epoch 001/10 D=-20.3294 G=15.9180
+    [GAN] epoch 002/10 D=-17.5248 G=12.1768
+    [GAN] epoch 003/10 D=-15.3045 G=12.1068
+    [GAN] epoch 004/10 D=-13.9463 G=12.1232
+    [GAN] epoch 005/10 D=-6.9402 G=10.5546
+    [GAN] epoch 006/10 D=-3.4115 G=15.1081
+    [GAN] epoch 007/10 D=-2.7908 G=16.1136
+    [GAN] epoch 008/10 D=-2.5418 G=13.6005
+    [GAN] epoch 009/10 D=-2.1948 G=10.6969
+    [GAN] epoch 010/10 D=-2.1903 G=9.8324
+    [ENC] epoch 001/10 loss=0.195724
+    [ENC] epoch 002/10 loss=0.130059
+    [ENC] epoch 003/10 loss=0.112906
+    [ENC] epoch 004/10 loss=0.104937
+    [ENC] epoch 005/10 loss=0.102168
+    [ENC] epoch 006/10 loss=0.096162
+    [ENC] epoch 007/10 loss=0.094578
+    [ENC] epoch 008/10 loss=0.093919
+    [ENC] epoch 009/10 loss=0.092210
+    [ENC] epoch 010/10 loss=0.089113
+    seed 0 -> AUC 0.7141  PR-AUC 0.5802   [10/27  53 นาที]
+russia    USOIL   หน้าต่าง 32   เทรน 1487  ทดสอบ 125  positive 0.528  ตัวอย่างอิสระราว 3.9
+    [GAN] epoch 001/10 D=-19.6295 G=15.9577
+    [GAN] epoch 002/10 D=-19.4861 G=13.9398
+    [GAN] epoch 003/10 D=-17.5499 G=14.3559
+    [GAN] epoch 004/10 D=-16.4579 G=13.6682
+    [GAN] epoch 005/10 D=-15.3365 G=13.0508
+    [GAN] epoch 006/10 D=-15.2402 G=11.3213
+    [GAN] epoch 007/10 D=-15.1820 G=11.8093
+    [GAN] epoch 008/10 D=-14.1256 G=12.6442
+    [GAN] epoch 009/10 D=-13.8639 G=12.4184
+    [GAN] epoch 010/10 D=-13.8322 G=11.3303
+    [ENC] epoch 001/10 loss=0.441368
+    [ENC] epoch 002/10 loss=0.389640
+    [ENC] epoch 003/10 loss=0.374430
+    [ENC] epoch 004/10 loss=0.367510
+    [ENC] epoch 005/10 loss=0.365607
+    [ENC] epoch 006/10 loss=0.365150
+    [ENC] epoch 007/10 loss=0.361323
+    [ENC] epoch 008/10 loss=0.358175
+    [ENC] epoch 009/10 loss=0.359295
+    [ENC] epoch 010/10 loss=0.356570
+    seed 0 -> AUC 0.5211  PR-AUC 0.6280   [11/27  58 นาที]
+russia    USOIL   หน้าต่าง 64   เทรน 1474  ทดสอบ 125  positive 0.680  ตัวอย่างอิสระราว 2.0
+    [GAN] epoch 001/10 D=-20.4693 G=16.9623
+    [GAN] epoch 002/10 D=-19.9011 G=14.9286
+    [GAN] epoch 003/10 D=-17.5207 G=13.7955
+    [GAN] epoch 004/10 D=-16.6301 G=13.9913
+    [GAN] epoch 005/10 D=-15.6214 G=12.6803
+    [GAN] epoch 006/10 D=-15.5580 G=13.0673
+    [GAN] epoch 007/10 D=-13.8181 G=11.7830
+    [GAN] epoch 008/10 D=-11.3497 G=10.8527
+    [GAN] epoch 009/10 D=-4.3674 G=11.9708
+    [GAN] epoch 010/10 D=-2.3043 G=12.5208
+    [ENC] epoch 001/10 loss=0.184819
+    [ENC] epoch 002/10 loss=0.140739
+    [ENC] epoch 003/10 loss=0.130676
+    [ENC] epoch 004/10 loss=0.125328
+    [ENC] epoch 005/10 loss=0.121199
+    [ENC] epoch 006/10 loss=0.117997
+    [ENC] epoch 007/10 loss=0.115140
+    [ENC] epoch 008/10 loss=0.113706
+    [ENC] epoch 009/10 loss=0.111591
+    [ENC] epoch 010/10 loss=0.110226
+    seed 0 -> AUC 0.8191  PR-AUC 0.9237   [12/27  64 นาที]
+russia    GOLD    หน้าต่าง 16   เทรน 1486  ทดสอบ 125  positive 0.400  ตัวอย่างอิสระราว 7.8
+    [GAN] epoch 001/10 D=-20.0304 G=15.7678
+    [GAN] epoch 002/10 D=-17.1950 G=12.5946
+    [GAN] epoch 003/10 D=-15.1271 G=12.4988
+    [GAN] epoch 004/10 D=-14.7343 G=11.9584
+    [GAN] epoch 005/10 D=-13.0330 G=11.0893
+    [GAN] epoch 006/10 D=-6.4764 G=10.1302
+    [GAN] epoch 007/10 D=-3.1226 G=15.9270
+    [GAN] epoch 008/10 D=-2.3775 G=14.8491
+    [GAN] epoch 009/10 D=-2.1539 G=10.4024
+    [GAN] epoch 010/10 D=-2.1310 G=7.6297
+    [ENC] epoch 001/10 loss=0.204095
+    [ENC] epoch 002/10 loss=0.140780
+    [ENC] epoch 003/10 loss=0.121698
+    [ENC] epoch 004/10 loss=0.116919
+    [ENC] epoch 005/10 loss=0.110638
+    [ENC] epoch 006/10 loss=0.109763
+    [ENC] epoch 007/10 loss=0.103957
+    [ENC] epoch 008/10 loss=0.101132
+    [ENC] epoch 009/10 loss=0.100610
+    [ENC] epoch 010/10 loss=0.098725
+    seed 0 -> AUC 0.3752  PR-AUC 0.4013   [13/27  70 นาที]
+russia    GOLD    หน้าต่าง 32   เทรน 1486  ทดสอบ 125  positive 0.528  ตัวอย่างอิสระราว 3.9
+    [GAN] epoch 001/10 D=-19.3546 G=15.4250
+    [GAN] epoch 002/10 D=-16.7340 G=12.8064
+    [GAN] epoch 003/10 D=-15.0262 G=13.8835
+    [GAN] epoch 004/10 D=-14.5360 G=13.2456
+    [GAN] epoch 005/10 D=-12.8740 G=11.2274
+    [GAN] epoch 006/10 D=-4.7293 G=10.8391
+    [GAN] epoch 007/10 D=-2.7196 G=18.1950
+    [GAN] epoch 008/10 D=-2.1885 G=18.6049
+    [GAN] epoch 009/10 D=-1.8644 G=17.0613
+    [GAN] epoch 010/10 D=-1.8208 G=15.0988
+    [ENC] epoch 001/10 loss=0.250997
+    [ENC] epoch 002/10 loss=0.191537
+    [ENC] epoch 003/10 loss=0.177458
+    [ENC] epoch 004/10 loss=0.170275
+    [ENC] epoch 005/10 loss=0.163656
+    [ENC] epoch 006/10 loss=0.160743
+    [ENC] epoch 007/10 loss=0.156582
+    [ENC] epoch 008/10 loss=0.153474
+    [ENC] epoch 009/10 loss=0.153097
+    [ENC] epoch 010/10 loss=0.152525
+    seed 0 -> AUC 0.4266  PR-AUC 0.4707   [14/27  77 นาที]
+russia    GOLD    หน้าต่าง 64   เทรน 1473  ทดสอบ 125  positive 0.680  ตัวอย่างอิสระราว 2.0
+    [GAN] epoch 001/10 D=-20.5204 G=17.3961
+    [GAN] epoch 002/10 D=-17.6089 G=14.1939
+    [GAN] epoch 003/10 D=-15.4612 G=13.3937
+    [GAN] epoch 004/10 D=-14.6919 G=13.1365
+    [GAN] epoch 005/10 D=-12.3022 G=12.1230
+    [GAN] epoch 006/10 D=-4.7857 G=10.8292
+    [GAN] epoch 007/10 D=-2.9588 G=16.2943
+    [GAN] epoch 008/10 D=-2.4075 G=20.6889
+    [GAN] epoch 009/10 D=-2.2576 G=16.2463
+    [GAN] epoch 010/10 D=-1.9167 G=11.7093
+    [ENC] epoch 001/10 loss=0.234210
+    [ENC] epoch 002/10 loss=0.172104
+    [ENC] epoch 003/10 loss=0.158627
+    [ENC] epoch 004/10 loss=0.147521
+    [ENC] epoch 005/10 loss=0.141985
+    [ENC] epoch 006/10 loss=0.141605
+    [ENC] epoch 007/10 loss=0.134407
+    [ENC] epoch 008/10 loss=0.133264
+    [ENC] epoch 009/10 loss=0.131401
+    [ENC] epoch 010/10 loss=0.128394
+    seed 0 -> AUC 0.5750  PR-AUC 0.7017   [15/27  83 นาที]
+russia    EURUSD  หน้าต่าง 16   เทรน 1540  ทดสอบ 130  positive 0.392  ตัวอย่างอิสระราว 8.1
+    [GAN] epoch 001/10 D=-20.0283 G=15.1745
+    [GAN] epoch 002/10 D=-17.0248 G=11.6796
+    [GAN] epoch 003/10 D=-15.2491 G=11.9380
+    [GAN] epoch 004/10 D=-14.8801 G=11.9789
+    [GAN] epoch 005/10 D=-14.0346 G=11.7043
+    [GAN] epoch 006/10 D=-12.4446 G=11.2555
+    [GAN] epoch 007/10 D=-5.4459 G=9.9271
+    [GAN] epoch 008/10 D=-3.0523 G=13.6876
+    [GAN] epoch 009/10 D=-2.3123 G=12.8838
+    [GAN] epoch 010/10 D=-2.3861 G=10.9297
+    [ENC] epoch 001/10 loss=0.191309
+    [ENC] epoch 002/10 loss=0.135846
+    [ENC] epoch 003/10 loss=0.122166
+    [ENC] epoch 004/10 loss=0.115003
+    [ENC] epoch 005/10 loss=0.108578
+    [ENC] epoch 006/10 loss=0.104733
+    [ENC] epoch 007/10 loss=0.101347
+    [ENC] epoch 008/10 loss=0.100786
+    [ENC] epoch 009/10 loss=0.100919
+    [ENC] epoch 010/10 loss=0.097406
+    seed 0 -> AUC 0.4887  PR-AUC 0.4313   [16/27  90 นาที]
+russia    EURUSD  หน้าต่าง 32   เทรน 1540  ทดสอบ 130  positive 0.515  ตัวอย่างอิสระราว 4.1
+    [GAN] epoch 001/10 D=-19.0793 G=15.5269
+    [GAN] epoch 002/10 D=-15.5699 G=12.0697
+    [GAN] epoch 003/10 D=-11.1042 G=11.1798
+    [GAN] epoch 004/10 D=-4.8030 G=12.3049
+    [GAN] epoch 005/10 D=-3.3398 G=14.0766
+    [GAN] epoch 006/10 D=-2.5975 G=12.2490
+    [GAN] epoch 007/10 D=-2.0952 G=11.4788
+    [GAN] epoch 008/10 D=-2.1504 G=8.7488
+    [GAN] epoch 009/10 D=-2.1004 G=7.6486
+    [GAN] epoch 010/10 D=-2.0418 G=6.6770
+    [ENC] epoch 001/10 loss=0.239759
+    [ENC] epoch 002/10 loss=0.185338
+    [ENC] epoch 003/10 loss=0.170370
+    [ENC] epoch 004/10 loss=0.164071
+    [ENC] epoch 005/10 loss=0.158020
+    [ENC] epoch 006/10 loss=0.153662
+    [ENC] epoch 007/10 loss=0.152657
+    [ENC] epoch 008/10 loss=0.150126
+    [ENC] epoch 009/10 loss=0.148574
+    [ENC] epoch 010/10 loss=0.147442
+    seed 0 -> AUC 0.3928  PR-AUC 0.5410   [17/27  98 นาที]
+russia    EURUSD  หน้าต่าง 64   เทรน 1529  ทดสอบ 130  positive 0.677  ตัวอย่างอิสระราว 2.0
+    [GAN] epoch 001/10 D=-20.3024 G=16.8091
+    [GAN] epoch 002/10 D=-17.2905 G=13.6310
+    [GAN] epoch 003/10 D=-15.4570 G=14.2117
+    [GAN] epoch 004/10 D=-15.0326 G=14.0374
+    [GAN] epoch 005/10 D=-13.5490 G=12.4214
+    [GAN] epoch 006/10 D=-5.5728 G=12.8802
+    [GAN] epoch 007/10 D=-3.6042 G=17.8609
+    [GAN] epoch 008/10 D=-2.7721 G=24.1315
+    [GAN] epoch 009/10 D=-2.3808 G=21.2988
+    [GAN] epoch 010/10 D=-2.1065 G=17.1523
+    [ENC] epoch 001/10 loss=0.235769
+    [ENC] epoch 002/10 loss=0.177982
+    [ENC] epoch 003/10 loss=0.162074
+    [ENC] epoch 004/10 loss=0.151797
+    [ENC] epoch 005/10 loss=0.148368
+    [ENC] epoch 006/10 loss=0.141265
+    [ENC] epoch 007/10 loss=0.139571
+    [ENC] epoch 008/10 loss=0.135662
+    [ENC] epoch 009/10 loss=0.135758
+    [ENC] epoch 010/10 loss=0.137480
+    seed 0 -> AUC 0.4494  PR-AUC 0.6603   [18/27  104 นาที]
+iran2025  USOIL   หน้าต่าง 16   เทรน 2323  ทดสอบ 106  positive 0.236  ตัวอย่างอิสระราว 6.6
+    [GAN] epoch 001/10 D=-19.9869 G=15.4613
+    [GAN] epoch 002/10 D=-16.3624 G=12.4729
+    [GAN] epoch 003/10 D=-14.3394 G=11.4201
+    [GAN] epoch 004/10 D=-5.9942 G=11.5243
+    [GAN] epoch 005/10 D=-2.7096 G=16.5241
+    [GAN] epoch 006/10 D=-2.2360 G=10.8115
+    [GAN] epoch 007/10 D=-2.1213 G=8.3827
+    [GAN] epoch 008/10 D=-2.2298 G=7.2331
+    [GAN] epoch 009/10 D=-2.2740 G=4.6477
+    [GAN] epoch 010/10 D=-2.4831 G=0.5844
+    [ENC] epoch 001/10 loss=0.176262
+    [ENC] epoch 002/10 loss=0.121624
+    [ENC] epoch 003/10 loss=0.105649
+    [ENC] epoch 004/10 loss=0.098196
+    [ENC] epoch 005/10 loss=0.092642
+    [ENC] epoch 006/10 loss=0.089659
+    [ENC] epoch 007/10 loss=0.085812
+    [ENC] epoch 008/10 loss=0.084403
+    [ENC] epoch 009/10 loss=0.082400
+    [ENC] epoch 010/10 loss=0.081839
+    seed 0 -> AUC 0.4928  PR-AUC 0.2865   [19/27  113 นาที]
+iran2025  USOIL   หน้าต่าง 32   เทรน 2323  ทดสอบ 106  positive 0.387  ตัวอย่างอิสระราว 3.3
+    [GAN] epoch 001/10 D=-19.5317 G=15.8275
+    [GAN] epoch 002/10 D=-16.3967 G=13.5568
+    [GAN] epoch 003/10 D=-14.9133 G=12.2454
+    [GAN] epoch 004/10 D=-14.7057 G=11.0734
+    [GAN] epoch 005/10 D=-14.6637 G=11.2131
+    [GAN] epoch 006/10 D=-13.3659 G=10.4222
+    [GAN] epoch 007/10 D=-13.3608 G=9.5948
+    [GAN] epoch 008/10 D=-12.6170 G=8.7188
+    [GAN] epoch 009/10 D=-11.9857 G=8.0993
+    [GAN] epoch 010/10 D=-11.9867 G=8.6829
+    [ENC] epoch 001/10 loss=0.381221
+    [ENC] epoch 002/10 loss=0.332372
+    [ENC] epoch 003/10 loss=0.320984
+    [ENC] epoch 004/10 loss=0.314745
+    [ENC] epoch 005/10 loss=0.312118
+    [ENC] epoch 006/10 loss=0.308003
+    [ENC] epoch 007/10 loss=0.306736
+    [ENC] epoch 008/10 loss=0.306104
+    [ENC] epoch 009/10 loss=0.305005
+    [ENC] epoch 010/10 loss=0.303704
+    seed 0 -> AUC 0.3265  PR-AUC 0.2993   [20/27  123 นาที]
+iran2025  USOIL   หน้าต่าง 64   เทรน 2310  ทดสอบ 106  positive 0.566  ตัวอย่างอิสระราว 1.7
+    [GAN] epoch 001/10 D=-20.4111 G=16.5915
+    [GAN] epoch 002/10 D=-16.1895 G=13.5608
+    [GAN] epoch 003/10 D=-12.3963 G=12.2432
+    [GAN] epoch 004/10 D=-9.3122 G=8.9949
+    [GAN] epoch 005/10 D=-3.9638 G=8.3874
+    [GAN] epoch 006/10 D=-2.0694 G=10.1996
+    [GAN] epoch 007/10 D=-1.9309 G=10.4044
+    [GAN] epoch 008/10 D=-1.8693 G=6.7815
+    [GAN] epoch 009/10 D=-1.8796 G=7.2941
+    [GAN] epoch 010/10 D=-1.9181 G=6.4464
+    [ENC] epoch 001/10 loss=0.181316
+    [ENC] epoch 002/10 loss=0.134737
+    [ENC] epoch 003/10 loss=0.121599
+    [ENC] epoch 004/10 loss=0.115520
+    [ENC] epoch 005/10 loss=0.111760
+    [ENC] epoch 006/10 loss=0.109319
+    [ENC] epoch 007/10 loss=0.107213
+    [ENC] epoch 008/10 loss=0.105620
+    [ENC] epoch 009/10 loss=0.105192
+    [ENC] epoch 010/10 loss=0.103653
+    seed 0 -> AUC 0.7178  PR-AUC 0.8271   [21/27  133 นาที]
+iran2025  GOLD    หน้าต่าง 16   เทรน 2322  ทดสอบ 106  positive 0.236  ตัวอย่างอิสระราว 6.6
+    [GAN] epoch 001/10 D=-18.9919 G=15.2643
+    [GAN] epoch 002/10 D=-15.1737 G=11.4909
+    [GAN] epoch 003/10 D=-10.4987 G=11.3173
+    [GAN] epoch 004/10 D=-3.8505 G=14.0451
+    [GAN] epoch 005/10 D=-2.5324 G=14.4767
+    [GAN] epoch 006/10 D=-2.1406 G=8.0151
+    [GAN] epoch 007/10 D=-2.1571 G=6.3267
+    [GAN] epoch 008/10 D=-2.1818 G=5.8205
+    [GAN] epoch 009/10 D=-2.2541 G=3.2423
+    [GAN] epoch 010/10 D=-2.3521 G=0.1986
+    [ENC] epoch 001/10 loss=0.174404
+    [ENC] epoch 002/10 loss=0.117816
+    [ENC] epoch 003/10 loss=0.106375
+    [ENC] epoch 004/10 loss=0.101720
+    [ENC] epoch 005/10 loss=0.095945
+    [ENC] epoch 006/10 loss=0.092714
+    [ENC] epoch 007/10 loss=0.091064
+    [ENC] epoch 008/10 loss=0.088369
+    [ENC] epoch 009/10 loss=0.086481
+    [ENC] epoch 010/10 loss=0.084584
+    seed 0 -> AUC 0.5590  PR-AUC 0.2555   [22/27  143 นาที]
+iran2025  GOLD    หน้าต่าง 32   เทรน 2322  ทดสอบ 106  positive 0.387  ตัวอย่างอิสระราว 3.3
+    [GAN] epoch 001/10 D=-18.3275 G=15.0238
+    [GAN] epoch 002/10 D=-14.1016 G=12.2319
+    [GAN] epoch 003/10 D=-4.9508 G=11.9031
+    [GAN] epoch 004/10 D=-2.7635 G=13.5967
+    [GAN] epoch 005/10 D=-2.1551 G=10.6707
+    [GAN] epoch 006/10 D=-1.9418 G=9.2736
+    [GAN] epoch 007/10 D=-1.9732 G=6.7828
+    [GAN] epoch 008/10 D=-1.8606 G=6.4227
+    [GAN] epoch 009/10 D=-1.8464 G=3.9203
+    [GAN] epoch 010/10 D=-1.9163 G=3.1181
+    [ENC] epoch 001/10 loss=0.229549
+    [ENC] epoch 002/10 loss=0.171839
+    [ENC] epoch 003/10 loss=0.155702
+    [ENC] epoch 004/10 loss=0.146296
+    [ENC] epoch 005/10 loss=0.141586
+    [ENC] epoch 006/10 loss=0.138196
+    [ENC] epoch 007/10 loss=0.134743
+    [ENC] epoch 008/10 loss=0.133408
+    [ENC] epoch 009/10 loss=0.130986
+    [ENC] epoch 010/10 loss=0.131374
+    seed 0 -> AUC 0.6090  PR-AUC 0.4163   [23/27  157 นาที]
+iran2025  GOLD    หน้าต่าง 64   เทรน 2309  ทดสอบ 106  positive 0.566  ตัวอย่างอิสระราว 1.7
+    [GAN] epoch 001/10 D=-19.9742 G=16.2253
+    [GAN] epoch 002/10 D=-15.2391 G=12.4722
+    [GAN] epoch 003/10 D=-7.7578 G=12.0235
+    [GAN] epoch 004/10 D=-3.3251 G=15.6555
+    [GAN] epoch 005/10 D=-2.2084 G=13.8071
+    [GAN] epoch 006/10 D=-2.0231 G=10.6886
+    [GAN] epoch 007/10 D=-2.0127 G=7.1378
+    [GAN] epoch 008/10 D=-1.9291 G=5.4127
+    [GAN] epoch 009/10 D=-1.9111 G=5.2434
+    [GAN] epoch 010/10 D=-1.9883 G=2.7957
+    [ENC] epoch 001/10 loss=0.186079
+    [ENC] epoch 002/10 loss=0.136520
+    [ENC] epoch 003/10 loss=0.122711
+    [ENC] epoch 004/10 loss=0.115633
+    [ENC] epoch 005/10 loss=0.111525
+[INFO] Device: cpu
+พบผลเดิม 23 แถว จะทำต่อจากตรงนั้น
+อุปกรณ์ cpu   ภาพ 32x32 คงที่ทุกกรณี   งานทั้งหมด 27 ช่อง
+epoch 10  batch 32  n_critic 2
+
+covid     USOIL   หน้าต่าง 16   เทรน 983  ทดสอบ 146  positive 0.397  ตัวอย่างอิสระราว 9.1
+    seed 0  ข้าม ทำไว้แล้ว
+covid     USOIL   หน้าต่าง 32   เทรน 983  ทดสอบ 146  positive 0.507  ตัวอย่างอิสระราว 4.6
+    seed 0  ข้าม ทำไว้แล้ว
+covid     USOIL   หน้าต่าง 64   เทรน 974  ทดสอบ 146  positive 0.664  ตัวอย่างอิสระราว 2.3
+    seed 0  ข้าม ทำไว้แล้ว
+covid     GOLD    หน้าต่าง 16   เทรน 982  ทดสอบ 146  positive 0.397  ตัวอย่างอิสระราว 9.1
+    seed 0  ข้าม ทำไว้แล้ว
+covid     GOLD    หน้าต่าง 32   เทรน 982  ทดสอบ 146  positive 0.507  ตัวอย่างอิสระราว 4.6
+    seed 0  ข้าม ทำไว้แล้ว
+covid     GOLD    หน้าต่าง 64   เทรน 973  ทดสอบ 146  positive 0.664  ตัวอย่างอิสระราว 2.3
+    seed 0  ข้าม ทำไว้แล้ว
+covid     EURUSD  หน้าต่าง 16   เทรน 1018  ทดสอบ 152  positive 0.388  ตัวอย่างอิสระราว 9.5
+    seed 0  ข้าม ทำไว้แล้ว
+covid     EURUSD  หน้าต่าง 32   เทรน 1018  ทดสอบ 152  positive 0.493  ตัวอย่างอิสระราว 4.8
+    seed 0  ข้าม ทำไว้แล้ว
+covid     EURUSD  หน้าต่าง 64   เทรน 1013  ทดสอบ 152  positive 0.671  ตัวอย่างอิสระราว 2.4
+    seed 0  ข้าม ทำไว้แล้ว
+russia    USOIL   หน้าต่าง 16   เทรน 1487  ทดสอบ 125  positive 0.400  ตัวอย่างอิสระราว 7.8
+    seed 0  ข้าม ทำไว้แล้ว
+russia    USOIL   หน้าต่าง 32   เทรน 1487  ทดสอบ 125  positive 0.528  ตัวอย่างอิสระราว 3.9
+    seed 0  ข้าม ทำไว้แล้ว
+russia    USOIL   หน้าต่าง 64   เทรน 1474  ทดสอบ 125  positive 0.680  ตัวอย่างอิสระราว 2.0
+    seed 0  ข้าม ทำไว้แล้ว
+russia    GOLD    หน้าต่าง 16   เทรน 1486  ทดสอบ 125  positive 0.400  ตัวอย่างอิสระราว 7.8
+    seed 0  ข้าม ทำไว้แล้ว
+russia    GOLD    หน้าต่าง 32   เทรน 1486  ทดสอบ 125  positive 0.528  ตัวอย่างอิสระราว 3.9
+    seed 0  ข้าม ทำไว้แล้ว
+russia    GOLD    หน้าต่าง 64   เทรน 1473  ทดสอบ 125  positive 0.680  ตัวอย่างอิสระราว 2.0
+    seed 0  ข้าม ทำไว้แล้ว
+russia    EURUSD  หน้าต่าง 16   เทรน 1540  ทดสอบ 130  positive 0.392  ตัวอย่างอิสระราว 8.1
+    seed 0  ข้าม ทำไว้แล้ว
+russia    EURUSD  หน้าต่าง 32   เทรน 1540  ทดสอบ 130  positive 0.515  ตัวอย่างอิสระราว 4.1
+    seed 0  ข้าม ทำไว้แล้ว
+russia    EURUSD  หน้าต่าง 64   เทรน 1529  ทดสอบ 130  positive 0.677  ตัวอย่างอิสระราว 2.0
+    seed 0  ข้าม ทำไว้แล้ว
+iran2025  USOIL   หน้าต่าง 16   เทรน 2323  ทดสอบ 106  positive 0.236  ตัวอย่างอิสระราว 6.6
+    seed 0  ข้าม ทำไว้แล้ว
+iran2025  USOIL   หน้าต่าง 32   เทรน 2323  ทดสอบ 106  positive 0.387  ตัวอย่างอิสระราว 3.3
+    seed 0  ข้าม ทำไว้แล้ว
+iran2025  USOIL   หน้าต่าง 64   เทรน 2310  ทดสอบ 106  positive 0.566  ตัวอย่างอิสระราว 1.7
+    seed 0  ข้าม ทำไว้แล้ว
+iran2025  GOLD    หน้าต่าง 16   เทรน 2322  ทดสอบ 106  positive 0.236  ตัวอย่างอิสระราว 6.6
+    seed 0  ข้าม ทำไว้แล้ว
+iran2025  GOLD    หน้าต่าง 32   เทรน 2322  ทดสอบ 106  positive 0.387  ตัวอย่างอิสระราว 3.3
+    seed 0  ข้าม ทำไว้แล้ว
+iran2025  GOLD    หน้าต่าง 64   เทรน 2309  ทดสอบ 106  positive 0.566  ตัวอย่างอิสระราว 1.7
+    [GAN] epoch 001/10 D=-19.9742 G=16.2253
+    [GAN] epoch 002/10 D=-15.2391 G=12.4722
+    [GAN] epoch 003/10 D=-7.7578 G=12.0235
+    [GAN] epoch 004/10 D=-3.3251 G=15.6555
+    [GAN] epoch 005/10 D=-2.2084 G=13.8071
+    [GAN] epoch 006/10 D=-2.0231 G=10.6886
+    [GAN] epoch 007/10 D=-2.0127 G=7.1378
+    [GAN] epoch 008/10 D=-1.9291 G=5.4127
+    [GAN] epoch 009/10 D=-1.9111 G=5.2434
+    [GAN] epoch 010/10 D=-1.9883 G=2.7957
+    [ENC] epoch 001/10 loss=0.186079
+    [ENC] epoch 002/10 loss=0.136520
+    [ENC] epoch 003/10 loss=0.122711
+    [ENC] epoch 004/10 loss=0.115633
+    [ENC] epoch 005/10 loss=0.111525
+    [ENC] epoch 006/10 loss=0.108804
+    [ENC] epoch 007/10 loss=0.107034
+    [ENC] epoch 008/10 loss=0.104438
+    [ENC] epoch 009/10 loss=0.103591
+    [ENC] epoch 010/10 loss=0.102339
+    seed 0 -> AUC 0.8989  PR-AUC 0.9489   [24/27  18 นาที]
+iran2025  EURUSD  หน้าต่าง 16   เทรน 2408  ทดสอบ 107  positive 0.243  ตัวอย่างอิสระราว 6.7
+    [GAN] epoch 001/10 D=-18.9827 G=15.1567
+    [GAN] epoch 002/10 D=-15.3706 G=11.6072
+    [GAN] epoch 003/10 D=-10.3413 G=10.7377
+    [GAN] epoch 004/10 D=-3.6938 G=13.4919
+    [GAN] epoch 005/10 D=-2.5799 G=13.2814
+    [GAN] epoch 006/10 D=-2.4058 G=9.4916
+    [GAN] epoch 007/10 D=-2.2617 G=7.0650
+    [GAN] epoch 008/10 D=-2.3932 G=5.1503
+    [GAN] epoch 009/10 D=-2.6547 G=2.5338
+    [GAN] epoch 010/10 D=-2.7663 G=-0.0196
+    [ENC] epoch 001/10 loss=0.164154
+    [ENC] epoch 002/10 loss=0.113088
+    [ENC] epoch 003/10 loss=0.100778
+    [ENC] epoch 004/10 loss=0.095066
+    [ENC] epoch 005/10 loss=0.090206
+    [ENC] epoch 006/10 loss=0.087223
+    [ENC] epoch 007/10 loss=0.085523
+    [ENC] epoch 008/10 loss=0.083862
+    [ENC] epoch 009/10 loss=0.082599
+    [ENC] epoch 010/10 loss=0.081641
+    seed 0 -> AUC 0.1652  PR-AUC 0.1511   [25/27  32 นาที]
+iran2025  EURUSD  หน้าต่าง 32   เทรน 2408  ทดสอบ 107  positive 0.393  ตัวอย่างอิสระราว 3.3
+    [GAN] epoch 001/10 D=-18.9904 G=14.4260
+    [GAN] epoch 002/10 D=-15.5832 G=13.1248
+    [GAN] epoch 003/10 D=-14.6505 G=12.1890
+    [GAN] epoch 004/10 D=-8.0204 G=10.7723
+    [GAN] epoch 005/10 D=-2.8100 G=15.0608
+    [GAN] epoch 006/10 D=-2.1491 G=16.4437
+    [GAN] epoch 007/10 D=-1.9075 G=13.4148
+    [GAN] epoch 008/10 D=-2.0017 G=9.5525
+    [GAN] epoch 009/10 D=-2.0250 G=7.4084
+    [GAN] epoch 010/10 D=-1.9290 G=6.9309
+    [ENC] epoch 001/10 loss=0.213620
+    [ENC] epoch 002/10 loss=0.161635
+    [ENC] epoch 003/10 loss=0.147428
+    [ENC] epoch 004/10 loss=0.140574
+    [ENC] epoch 005/10 loss=0.136369
+    [ENC] epoch 006/10 loss=0.133625
+    [ENC] epoch 007/10 loss=0.132392
+    [ENC] epoch 008/10 loss=0.129275
+    [ENC] epoch 009/10 loss=0.127725
+    [ENC] epoch 010/10 loss=0.125709
+    seed 0 -> AUC 0.1788  PR-AUC 0.2714   [26/27  46 นาที]
+iran2025  EURUSD  หน้าต่าง 64   เทรน 2395  ทดสอบ 107  positive 0.570  ตัวอย่างอิสระราว 1.7
+    [GAN] epoch 001/10 D=-19.2816 G=15.6739
+    [GAN] epoch 002/10 D=-12.7503 G=11.6743
+    [GAN] epoch 003/10 D=-7.1739 G=10.3123
+    [GAN] epoch 004/10 D=-3.4697 G=12.4044
+    [GAN] epoch 005/10 D=-2.2198 G=12.1867
+    [GAN] epoch 006/10 D=-2.0209 G=9.6689
+    [GAN] epoch 007/10 D=-1.8806 G=7.3713
+    [GAN] epoch 008/10 D=-1.8006 G=6.2225
+    [GAN] epoch 009/10 D=-1.7850 G=2.9990
+[INFO] Device: cpu
+พบผลเดิม 26 แถว จะทำต่อจากตรงนั้น
+อุปกรณ์ cpu   ภาพ 32x32 คงที่ทุกกรณี   งานทั้งหมด 27 ช่อง
+epoch 10  batch 32  n_critic 2
+
+covid     USOIL   หน้าต่าง 16   เทรน 983  ทดสอบ 146  positive 0.397  ตัวอย่างอิสระราว 9.1
+    seed 0  ข้าม ทำไว้แล้ว
+covid     USOIL   หน้าต่าง 32   เทรน 983  ทดสอบ 146  positive 0.507  ตัวอย่างอิสระราว 4.6
+    seed 0  ข้าม ทำไว้แล้ว
+covid     USOIL   หน้าต่าง 64   เทรน 974  ทดสอบ 146  positive 0.664  ตัวอย่างอิสระราว 2.3
+    seed 0  ข้าม ทำไว้แล้ว
+covid     GOLD    หน้าต่าง 16   เทรน 982  ทดสอบ 146  positive 0.397  ตัวอย่างอิสระราว 9.1
+    seed 0  ข้าม ทำไว้แล้ว
+covid     GOLD    หน้าต่าง 32   เทรน 982  ทดสอบ 146  positive 0.507  ตัวอย่างอิสระราว 4.6
+    seed 0  ข้าม ทำไว้แล้ว
+covid     GOLD    หน้าต่าง 64   เทรน 973  ทดสอบ 146  positive 0.664  ตัวอย่างอิสระราว 2.3
+    seed 0  ข้าม ทำไว้แล้ว
+covid     EURUSD  หน้าต่าง 16   เทรน 1018  ทดสอบ 152  positive 0.388  ตัวอย่างอิสระราว 9.5
+    seed 0  ข้าม ทำไว้แล้ว
+covid     EURUSD  หน้าต่าง 32   เทรน 1018  ทดสอบ 152  positive 0.493  ตัวอย่างอิสระราว 4.8
+    seed 0  ข้าม ทำไว้แล้ว
+covid     EURUSD  หน้าต่าง 64   เทรน 1013  ทดสอบ 152  positive 0.671  ตัวอย่างอิสระราว 2.4
+    seed 0  ข้าม ทำไว้แล้ว
+russia    USOIL   หน้าต่าง 16   เทรน 1487  ทดสอบ 125  positive 0.400  ตัวอย่างอิสระราว 7.8
+    seed 0  ข้าม ทำไว้แล้ว
+russia    USOIL   หน้าต่าง 32   เทรน 1487  ทดสอบ 125  positive 0.528  ตัวอย่างอิสระราว 3.9
+    seed 0  ข้าม ทำไว้แล้ว
+russia    USOIL   หน้าต่าง 64   เทรน 1474  ทดสอบ 125  positive 0.680  ตัวอย่างอิสระราว 2.0
+    seed 0  ข้าม ทำไว้แล้ว
+russia    GOLD    หน้าต่าง 16   เทรน 1486  ทดสอบ 125  positive 0.400  ตัวอย่างอิสระราว 7.8
+    seed 0  ข้าม ทำไว้แล้ว
+russia    GOLD    หน้าต่าง 32   เทรน 1486  ทดสอบ 125  positive 0.528  ตัวอย่างอิสระราว 3.9
+    seed 0  ข้าม ทำไว้แล้ว
+russia    GOLD    หน้าต่าง 64   เทรน 1473  ทดสอบ 125  positive 0.680  ตัวอย่างอิสระราว 2.0
+    seed 0  ข้าม ทำไว้แล้ว
+russia    EURUSD  หน้าต่าง 16   เทรน 1540  ทดสอบ 130  positive 0.392  ตัวอย่างอิสระราว 8.1
+    seed 0  ข้าม ทำไว้แล้ว
+russia    EURUSD  หน้าต่าง 32   เทรน 1540  ทดสอบ 130  positive 0.515  ตัวอย่างอิสระราว 4.1
+    seed 0  ข้าม ทำไว้แล้ว
+russia    EURUSD  หน้าต่าง 64   เทรน 1529  ทดสอบ 130  positive 0.677  ตัวอย่างอิสระราว 2.0
+    seed 0  ข้าม ทำไว้แล้ว
+iran2025  USOIL   หน้าต่าง 16   เทรน 2323  ทดสอบ 106  positive 0.236  ตัวอย่างอิสระราว 6.6
+    seed 0  ข้าม ทำไว้แล้ว
+iran2025  USOIL   หน้าต่าง 32   เทรน 2323  ทดสอบ 106  positive 0.387  ตัวอย่างอิสระราว 3.3
+    seed 0  ข้าม ทำไว้แล้ว
+iran2025  USOIL   หน้าต่าง 64   เทรน 2310  ทดสอบ 106  positive 0.566  ตัวอย่างอิสระราว 1.7
+    seed 0  ข้าม ทำไว้แล้ว
+iran2025  GOLD    หน้าต่าง 16   เทรน 2322  ทดสอบ 106  positive 0.236  ตัวอย่างอิสระราว 6.6
+    seed 0  ข้าม ทำไว้แล้ว
+iran2025  GOLD    หน้าต่าง 32   เทรน 2322  ทดสอบ 106  positive 0.387  ตัวอย่างอิสระราว 3.3
+    seed 0  ข้าม ทำไว้แล้ว
+iran2025  GOLD    หน้าต่าง 64   เทรน 2309  ทดสอบ 106  positive 0.566  ตัวอย่างอิสระราว 1.7
+    seed 0  ข้าม ทำไว้แล้ว
+iran2025  EURUSD  หน้าต่าง 16   เทรน 2408  ทดสอบ 107  positive 0.243  ตัวอย่างอิสระราว 6.7
+    seed 0  ข้าม ทำไว้แล้ว
+iran2025  EURUSD  หน้าต่าง 32   เทรน 2408  ทดสอบ 107  positive 0.393  ตัวอย่างอิสระราว 3.3
+    seed 0  ข้าม ทำไว้แล้ว
+iran2025  EURUSD  หน้าต่าง 64   เทรน 2395  ทดสอบ 107  positive 0.570  ตัวอย่างอิสระราว 1.7
+    [GAN] epoch 001/10 D=-19.2816 G=15.6739
+    [GAN] epoch 002/10 D=-12.7503 G=11.6743
+    [GAN] epoch 003/10 D=-7.1739 G=10.3123
+    [GAN] epoch 004/10 D=-3.4697 G=12.4044
+    [GAN] epoch 005/10 D=-2.2198 G=12.1867
+    [GAN] epoch 006/10 D=-2.0209 G=9.6689
+    [GAN] epoch 007/10 D=-1.8806 G=7.3713
+    [GAN] epoch 008/10 D=-1.8006 G=6.2225
+    [GAN] epoch 009/10 D=-1.7850 G=2.9990
+    [GAN] epoch 010/10 D=-1.7686 G=3.2247
+    [ENC] epoch 001/10 loss=0.181796
+    [ENC] epoch 002/10 loss=0.129371
+    [ENC] epoch 003/10 loss=0.117413
+    [ENC] epoch 004/10 loss=0.113679
+    [ENC] epoch 005/10 loss=0.108110
+    [ENC] epoch 006/10 loss=0.106692
+    [ENC] epoch 007/10 loss=0.102693
+    [ENC] epoch 008/10 loss=0.102389
+    [ENC] epoch 009/10 loss=0.101862
+    [ENC] epoch 010/10 loss=0.099618
+    seed 0 -> AUC 0.4469  PR-AUC 0.6545   [27/27  16 นาที]
+
+==============================================================================
+สรุป  ขนาดหน้าต่างกับผล  การจับคู่ exponential
+==============================================================================
+        n_cell  auc_mean  auc_sd  prauc_mean  prevalence   n_eff
+window                                                          
+16           9    0.4903  0.1681      0.3995      0.3433  7.9375
+32           9    0.4937  0.1848      0.5105      0.4716  3.9688
+64           9    0.6572  0.2209      0.8020      0.6377  1.9844
+
+เทียบแบบจับคู่กับหน้าต่าง 32 ที่ใช้ในบทความ
+หน้าต่าง     ช่อง   ผลต่าง      ชนะ        p
+16              9  -0.0034     4/9     1.000
+64              9   0.1635     8/9     0.039
+
+วิธีอ่าน
+  ขนาดภาพคงที่ทุกกรณี โครงข่ายจึงเหมือนกันหมด ไม่มีพารามิเตอร์เพิ่ม
+  ต้องดู n_eff คู่กับ AUC เสมอ หน้าต่างสั้นให้ตัวอย่างอิสระมากกว่า
+  สัดส่วน positive ก็ต่างกัน เพราะกฎป้ายคือคาบเกี่ยวช่วงเหตุการณ์
+
+ไฟล์ผล D:\tadgan_gaf\exponential_gaf\output_window_check\window_check_exponential.csv

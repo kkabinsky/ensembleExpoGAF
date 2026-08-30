@@ -29,9 +29,19 @@ Iran_new_run/
   covid_normal/results/           the crash-free 2019 control
   run_pr_auc/, test_ablation/     analysis programs that live beside the data
 test_cnn/                         the window and mapping sweeps
+sensitivity_runs/                 threshold, seed, overlap, bootstrap and DM
+                                  correction; each writes to output/
+encoding_ablation/                the six-arm encoding ablation, the budget and
+                                  lambda sweeps, and the mapping geometry and
+                                  its closed-form derivation
+backtest_new/                     the financial evaluation on the corrected
+                                  alarm-to-price alignment, and its figures
 outputs/                          the result tables the manuscript quotes
 *.py at the root                  the remaining analysis programs
 ```
+
+`RESULTS_MAP.md` lists every program against the table or figure it produces in
+the revised manuscript. Start there if you are checking a specific number.
 
 ## Running
 
