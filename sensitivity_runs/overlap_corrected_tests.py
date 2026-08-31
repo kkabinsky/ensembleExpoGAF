@@ -3,30 +3,7 @@
 overlap_corrected_tests.py
 ==========================
 
-Confidence intervals and comparisons that respect the overlap between windows.
-Reviewer 4, point 4.
-
-Windows advance by one observation and are 32 long, so a resampling scheme that
-draws single windows treats dependent observations as independent and returns
-an interval that is far too narrow. This program resamples contiguous blocks
-instead, and resamples the cells as well, so that both sources of dependence
-are carried into the interval.
-
-    inside a cell   a moving block bootstrap with block length 32, which is the
-                    shortest block whose interior carries no observation shared
-                    with the block before it
-    across cells    the fifteen episode-and-asset cells are themselves
-                    resampled, because a method that does well on one episode
-                    tends to do well on the same episode under every detector
-
-Nothing is retrained. The per-window scores are already stored, so the result
-is exact up to the resampling seed, which is fixed.
-
-What it answers
-    Whether the ranking of the detectors survives an interval that respects the
-    dependence, and whether the difference between any two of them is larger
-    than that interval. The point estimates are unchanged from the manuscript;
-    only the uncertainty around them is corrected.
+Compute confidence intervals that resample contiguous blocks of windows.
 
 Run
     python overlap_corrected_tests.py

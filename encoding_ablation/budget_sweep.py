@@ -3,27 +3,15 @@
 budget_sweep.py
 ===============
 
-Does the ordering of the four angular mappings depend on how long the model is
-trained?
+Repeat the encoding comparison at several training budgets.
 
-A short run separated the mappings cleanly and put the exponential map first. A
-longer run on the same data put it third. Only one of those can be reported, and
-which one is not a matter of preference: an ordering that changes with the
-training budget is a statement about the budget.
-
-This program repeats the comparison at several budgets, changing nothing else,
-and reports the gap between the leading mapping and the runner-up against the
-spread across seeds at the same budget. If the gap shrinks as the budget grows
-while the seed spread does not, the clean separation at a short budget was
-undertraining rather than a property of the encoding.
-
-The classifier is used because it is the cheapest arm and the one whose short
 run produced the clean answer; the same sweep on the adversarial arms costs
 hours rather than minutes and can be run with `--arm fanogan_compact`.
 
 Stopping and resuming
     Every finished cell is written immediately. Interrupt it and rerun the same
     command: it continues from the next unfinished cell.
+
 
 Run
     python budget_sweep.py

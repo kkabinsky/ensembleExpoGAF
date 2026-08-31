@@ -3,39 +3,7 @@
 run_ablation.py
 ===============
 
-Does the ordering of the four angular mappings depend on the reader?
-
-The window sweep of the manuscript compares the mappings with a supervised
-classifier and puts the exponential map first. The detector the framework
-proposes is one-class and never sees a crash label. This program reads the same
-images six ways on the same split and reports where the ordering holds and
-where it does not.
-
-    contrast          what each mapping does to the image before any model
-                      sees it; no data, no fitting
-    probe             ridge least squares on the flattened image, fitted on the
-                      training episodes' labels; the discriminative reading in
-                      its smallest form, with no seed and no training noise
-    mean_distance     distance to the mean of the normal training images; the
-                      one-class reading in its smallest form, and the baseline
-                      any f-AnoGAN has to beat
-    classifier        the supervised convolutional network of the window sweep
-    fanogan_paper     the f-AnoGAN of the manuscript, on normal windows only
-    fanogan_compact   the same objective with the networks resized to the data
-                      and every normalisation layer removed
-    pseudo            the compact f-AnoGAN scores the training windows, the
-                      quantile the manuscript uses as its alarm threshold turns
-                      those scores into labels, and the classifier is fitted on
-                      those; no crash label is used anywhere in training
-
-The split is leave-one-episode-out. Windows inside an episode overlap by 31 of
-their 32 observations, so a random split would leak almost completely. The
-four mappings see identical window positions, identical labels and identical
-folds, so the comparison is paired cell by cell.
-
-Start small. The default is five epochs, which is enough to see whether an arm
-behaves sensibly and takes a few minutes; raise it once the shape of the result
-is clear.
+Run the encoding ablation over the four mappings and the comparison arms.
 
 Run
     python run_ablation.py                          five epochs, one seed

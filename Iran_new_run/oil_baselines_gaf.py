@@ -1,22 +1,16 @@
 # -*- coding: utf-8 -*-
-"""GAF-IMAGE versions of the 8 baseline methods: Isolation Forest, One-Class
-SVM, Deep SVDD, DAGMM, OmniAnomaly, USAD, TranAD, Anomaly Transformer.
+"""
+oil_baselines_gaf.py
+====================
 
-Unlike oil_baselines.py / oil_baselines_deep.py (which feed the RAW 1D price
-window into each backbone), this module encodes each window as a GAF image
-(32x32, same as the main f-AnoGAN-GAF pipeline) using one of the four GAF
-mappings (cosine / arctan / arccosh / exponential), so the 8 baselines are
-compared on the SAME input representation as the proposed method -- only the
-backbone model differs:
-
-    isolation_forest / one_class_svm  -> flattened GAF image (1024-d vector)
-    deep_svdd, dagmm, usad            -> Conv2d encoder/decoder (image-native)
-    omnianomaly, tranad,
-    anomaly_transformer               -> each GAF row (32-d) treated as one
-                                          sequence token -> GRU / Transformer
+Run the eight baseline detectors on GAF images of the anomaly-score windows.
 
 Output folders mirror the main pipeline's convention:
     .\\oil\\<method>\\<mapping>\\   (metrics_summary.csv, test_scores.csv, plots\\...)
+
+Run
+
+    python oil_baselines_gaf.py
 """
 import math
 import os
@@ -603,7 +597,6 @@ ALL_GAF_METHODS = {
 
 
 # ============================================================
-# Reviewer-requested additional baselines: plain AE, CNN-AE, VAE
 # Same protocol as the other baselines: train on normal train GAFs,
 # anomaly score = reconstruction error (+ KL for the VAE), Q95 threshold.
 # ============================================================

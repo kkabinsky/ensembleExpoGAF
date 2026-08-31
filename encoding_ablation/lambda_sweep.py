@@ -3,34 +3,7 @@
 lambda_sweep.py
 ===============
 
-Is the gradient penalty what removes the difference between the four angular
-mappings?
-
-The four mappings do not produce images of the same spread: the standard
-deviation of the image values is 0.626 for the exponential map, 0.469 for
-cosine, 0.421 for arccosh and 0.248 for arctan. Under the supervised classifier
-that ordering is reproduced exactly, and under the adversarial one-class model
-it is not. The obvious suspect is the gradient penalty, which constrains the
-norm of the critic's gradient with respect to its input to one:
-
-    ((grad.norm(2, dim=[1, 2, 3]) - 1) ** 2).mean()
-
-That constraint acts directly on the quantity the mappings differ in. If it is
-what erases the difference, then lowering its weight should let the difference
-reappear, and the exponential mapping should recover ground.
-
-The test states its prediction before it is run, and one weight is changed and
-nothing else. A result in either direction is reportable: if the ordering does
-not move when the weight falls, the explanation above is wrong and we say so.
-
-Two weights are compared, 10 as published and 2. Zero is not included on
-purpose: removing the penalty altogether drops the Lipschitz constraint that
-the Wasserstein objective needs, and what comes back is instability rather than
-an answer.
-
-Stopping and resuming
-    Every finished cell is written immediately. Interrupt it and rerun the same
-    command: it continues from the next unfinished cell.
+Repeat the encoding comparison at several gradient-penalty weights.
 
 Run
     python lambda_sweep.py

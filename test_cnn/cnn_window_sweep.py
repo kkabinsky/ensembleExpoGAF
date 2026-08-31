@@ -3,28 +3,7 @@
 cnn_window_sweep.py
 ===================
 
-Does the window length change the ordering of the mappings? Answers Reviewer 4
-point 9.
-
-Design
-    The image is 32x32 at every window length, because the mapping resamples the
-    window to the image size before the angular transform. The network and its
-    parameter count are therefore identical throughout and only the span of
-    history summarised by one image changes.
-
-    The set of window start positions is also identical at every length, so the
-    test dates coincide and the comparison is paired cell by cell.
-
-Three window lengths by four mappings by four held-out episodes by three seeds,
-under leave-one-episode-out: windows inside an episode overlap by 31 of their 32
-observations, so a random split would leak almost completely.
-
-What cannot be held constant
-    A window is labelled positive when it overlaps the event interval, so a
-    longer window is labelled positive more often and the effective sample size
-    falls as the window lengthens. AUC is therefore not comparable across window
-    lengths; only the ordering within a length is. Both the positive rate and
-    the effective sample size are reported beside the AUC.
+Sweep the rolling-window length under the supervised classifier.
 
 Run
     python cnn_window_sweep.py

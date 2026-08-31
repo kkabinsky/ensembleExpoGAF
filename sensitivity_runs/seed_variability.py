@@ -3,32 +3,7 @@
 seed_variability.py
 ===================
 
-How much of the reported result is the seed? Reviewer 4, points 7 and 9.
-
-    "fixed seed experiments do not assess training variability"
-
-The manuscript reports one run per cell. This program repeats the trained stage
-of the pipeline with several seeds on every episode and asset, changing nothing
-else, and reports the spread. The spread is the yardstick every other
-difference in the paper has to be measured against: a gap between two methods
-that is smaller than the gap between two seeds of the same method is not a
-result.
-
-What is repeated and what is not
-    The TadGAN front end is not retrained. Its per-step scores are cached under
-    <episode>/<asset>/tadgan_stage/out/full_scores.csv and are the same in
-    every seed, so what varies here is the f-AnoGAN stage: the WGAN-GP pair and
-    the encoder are initialised and shuffled afresh for each seed. That is the
-    stage the manuscript's numbers come from.
-
-    The window positions, the labels, the train and test split and the angular
-    mapping are identical across seeds, so the comparison is paired cell by
-    cell.
-
-Stopping and resuming
-    Every finished cell is written immediately. Interrupt it at any point and
-    rerun the same command: it reads what is already there and continues from
-    the next unfinished seed. Nothing is recomputed.
+Repeat the trained stage at several seeds and report the spread.
 
 Run
     python seed_variability.py --seeds 5

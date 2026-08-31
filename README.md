@@ -8,7 +8,7 @@ Code and result files for:
 > Kabin Kanjamapornkul and Theepakorn Jithitikulchai
 > Faculty of Economics, Thammasat University
 > *Iran Journal of Computer Science*, submission
-> `f28943da-999b-4682-92be-d4c1f9b78031`, second revision.
+> `f28943da-999b-4682-92be-d4c1f9b78031`.
 
 Everything needed to reproduce every number in the manuscript: the model code,
 the analysis code, the per-window scores, and the price series. Clone it and the
@@ -79,23 +79,13 @@ any new run was added: the detector count went from thirteen to fifteen and the
 event-positive count rose by one in twelve of the fifteen cells. The pinned set
 is what keeps the output matching the manuscript.
 
-## What the runs establish
+## What the programs compute
 
-Three corrections to the submitted version, each of which changed a conclusion:
-
-- Diebold-Mariano recomputed with a Newey-West estimator at lag 31, because
-  adjacent windows share 31 of their 32 observations. Comparisons surviving Holm
-  correction fall from 26 of 45 to 3, all three involving the ensemble layer.
-- Lead time recomputed with every detector calibrated to a common false-alarm
-  rate on a crash-free control. No detector is significantly earlier than any
-  other at any of nine operating points.
-- The pipeline rebuilt so that the layered and standalone arms are different
-  models; in the submitted runs they carried identical scores in all 72 cells.
-
-Two component ablations were added, and both are unfavourable to the framework:
-the TadGAN front end used alone reaches mean AUC 0.560 against 0.528 for the
-full pipeline over the same fifteen cells, and the core encoding's mean PR-AUC
-is 0.457 against 0.470 for a random ordering of the same windows.
+The Diebold-Mariano statistics use a Newey-West long-run standard error at lag 31,
+because adjacent windows share 31 of their 32 observations, and the Holm step-down
+adjustment across all 45 pairs. Lead time is compared with every detector calibrated
+to a common false-alarm rate on a crash-free control. The layered and standalone
+arms are trained separately so that the two are different models.
 
 ## Licence
 

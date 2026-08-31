@@ -101,7 +101,6 @@ def soft_threshold_f1(
     logits = np.clip((p - threshold) / temperature, -60.0, 60.0)
     soft_flag = 1.0 / (1.0 + np.exp(-logits))
 
-    # Crash-class soft F1 (the equations reported in the manuscript).
     soft_tp = float(np.sum(soft_flag * y))
     soft_fp = float(np.sum(soft_flag * (1.0 - y)))
     soft_fn = float(np.sum((1.0 - soft_flag) * y))

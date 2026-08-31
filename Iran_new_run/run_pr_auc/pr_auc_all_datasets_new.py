@@ -3,26 +3,7 @@
 pr_auc_all_datasets_new.py
 ==========================
 
-PR-AUC for every asset and every episode. Answers Reviewer 4 point 3, which
-asks for PR-AUC to be reported.
-
-    Assets    USOIL, GOLD, EURUSD
-    Episodes  COVID-19, Russia-Ukraine, Chinese, Iran 2025, Iran 2026
-    Methods   eight baselines, the ExpoGAF core, and EnsembleExpoGAF
-
-Fifteen cells, ten methods, nothing retrained. Everything is computed from the
-per-window scores already stored, so each figure traces back to a run.
-
-The crash-free 2019 control is excluded: it holds no positive window, so
-average precision is undefined there.
-
-The reference that must be read beside it
------------------------------------------
-The PR-AUC of a random ordering equals the positive prevalence of that cell.
-A PR-AUC on its own therefore says nothing; what matters is the distance from
-the prevalence. Both are reported.
-
-    lift = AP - prevalence      positive is better than random
+Compute average precision for every method on every asset-episode cell.
 
 Inputs
 ------
@@ -32,6 +13,7 @@ Inputs
 The two files are aligned row for row, so they can be joined directly. As a
 check, prob_ENS gives AP 0.7919 on COVID-19 USOIL, which matches the 0.792
 reported for that cell.
+
 
 Run
     python pr_auc_all_datasets_new.py

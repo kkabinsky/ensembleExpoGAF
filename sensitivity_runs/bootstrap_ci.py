@@ -1,12 +1,9 @@
 # -*- coding: utf-8 -*-
-"""Circular moving-block bootstrap intervals for the core exponential path.
+"""
+bootstrap_ci.py
+===============
 
-Reproduces the point estimates and 95 per cent intervals reported for the
-Iran 2025 and Iran 2026 windows on USOIL, GOLD and EUR/USD.  The interval is
-not a normal-approximation interval: adjacent windows advance by one
-observation and span 32, so neighbouring rows share most of their input and an
-independent-sample interval would be far too narrow.  Resampling contiguous
-blocks of ten windows keeps that local dependence inside the resampled unit.
+Compute circular moving-block bootstrap intervals for F1 and AUC.
 
 Inputs, both shipped in the repository:
 
@@ -20,6 +17,7 @@ AUC is computed from ``prob_EXP``; F1 from ``pred_EXP``, which carries the
 each interval because each one holds the 200-window slice for its own event.
 
 Protocol: 5,000 replicates, block length 10, seed 42.
+
 
 Run:
 

@@ -1,18 +1,15 @@
 # -*- coding: utf-8 -*-
-"""Diebold--Mariano matrix corrected for overlapping windows.
+"""
+dm_overlap_corrected.py
+=======================
 
-The matrix as published divides the mean loss differential by the plain sample
-standard deviation.  Windows advance by one observation and span 32, so they
-share 31 of their 32 values and the loss differential is strongly
-autocorrelated; that divisor understates the standard error and inflates every
-statistic.  This script recomputes the same 45 pairwise comparisons on the same
-pooled windows with a Newey--West long-run variance at lag 31, then applies the
-Holm step-down adjustment across the 45 pairs.
+Compute the pairwise Diebold-Mariano matrix with a Newey-West long-run standard error and the Holm adjustment.
 
 Inputs, both shipped in the repository:
 
     ensembleExpoGAF/data/aligned_probabilities_9methods.csv   loss_<M> per window
     ensembleExpoGAF/data/aligned_hard_predictions_10methods.csv  loss_ENS
+
 
 Run:
 
@@ -35,7 +32,6 @@ OUT = os.path.join(HERE, "output")
 LAG = 31
 ALPHA = 0.05
 
-# row order as printed in the manuscript
 METHODS = [("ENS", "EnsembleExpoGAF soft vote (ENS)"),
            ("EXP", "ExpoGAF-AnoNet (EXP)"),
            ("AT", "Anomaly Transformer (AT)"),

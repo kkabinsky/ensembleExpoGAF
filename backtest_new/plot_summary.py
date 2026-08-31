@@ -3,28 +3,14 @@
 plot_summary.py
 ===============
 
-The summary figure for the manuscript: the mean over the fifteen crisis cells,
-with the control that keeps it honest beside it.
+Draw the two-panel summary figure from the backtest output.
 
-The per-episode bar charts show every cell; this shows the average, which is
-what the text quotes. It is drawn as two panels because the left panel on its
-own would mislead.
+Output
 
-    left    mean return above Buy-and-Hold by detector, under the published
-            rule and under the first-alarm rule, with a bar for the standard
-            error across the fifteen cells
-    right   the same detectors placed by how long they hold the asset against
-            how well their alarm dates beat random exit dates that hold it for
-            exactly as long. The horizontal line at 0.5 is what random dates
-            achieve, and the vertical spread shows that the ordering on the
-            left is largely the ordering of time spent in cash.
+output/backtest_summary.jpg
 
-Reading the left panel alone would report an ordering that the right panel
-shows to be exposure, not timing. They are drawn together for that reason.
+output/backtest_summary.pdf
 
-Output, in both formats the manuscript uses
-    output/backtest_summary.jpg
-    output/backtest_summary.pdf
 
 Run
     python plot_summary.py

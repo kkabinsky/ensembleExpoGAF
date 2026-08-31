@@ -3,7 +3,9 @@
 run_hybrid_true.py
 ==================
 
-Run the architecture the manuscript actually describes, on the date-based data
+Run the layered pipeline, building the image from the TadGAN score window.
+
+Build the image from the TadGAN score window, on the date-based data
 that carries enough labels:
 
     TadGAN -> anomaly score -> GAF of the score window -> f-AnoGAN
@@ -36,10 +38,12 @@ Index alignment
     window_start and window_end are written as price indices so that lead time
     remains directly comparable with the other methods.
 
+
 Output
     <OUT_DIR>/<asset>/hybrid_true/<mapping>/test_scores.csv
     in the same format as every other method, so the existing analysis scripts
     read it without modification.
+
 
 Run  (same settings as the submitted date-based runner)
     set OUT_DIR=results & set SC_CRASH_ONSET=2025-06-12 & python run_hybrid_true.py

@@ -3,12 +3,8 @@
 gaf_encodings.py
 ================
 
-Named gaf_encodings rather than encodings because Python imports a standard
-library module of that name at start-up and a local file would shadow it.
+Angular mappings, GAF construction, and the window loader shared by the ablation programs.
 
-The four angular mappings, the image builder, the data split and the metrics.
-
-Nothing in this file trains anything, so every number it produces is exact:
 run it twice on any machine and the output is identical to the last digit.
 The parts of the experiment that do train live in `models.py`.
 
@@ -17,6 +13,10 @@ per observation; the image is cos(phi_i + phi_j), the Gramian angular field.
 They differ in how much of the [0, pi] interval they reach and in where along
 the window range they place their angular resolution, and those two properties
 turn out to matter more than anything else in this experiment.
+
+Run
+
+    python gaf_encodings.py
 """
 import os
 

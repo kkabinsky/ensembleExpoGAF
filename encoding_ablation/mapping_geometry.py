@@ -1,28 +1,9 @@
 # -*- coding: utf-8 -*-
-"""Geometry of the four angular mappings, measured rather than asserted.
+"""
+mapping_geometry.py
+===================
 
-Reviewer 4 asked that the mathematical claims about the exponential map be
-verified.  This script reports the properties that can be checked, on exactly
-the windows the manuscript reports, and it is arranged so that the result which
-counts against the map is printed beside the result that favours it.
-
-Four quantities per mapping:
-
-* the angular interval the mapping reaches.  When the pair sum can exceed pi,
-  cos(phi_i + phi_j) turns and two distinct pairs are carried to the same pixel
-  value.  This is the fold, and it is why no claim of injectivity is made;
-* the measured share of pixel pairs past that fold, counted on the real windows
-  rather than on a uniform grid;
-* the angular derivative at the bottom and at the top of the window range.  A
-  mapping whose derivative rises with the value it encodes spends more of its
-  angular budget on large values, which is the property the exponential map is
-  named for;
-* the Fisher ratio between event and normal images: the distance between the
-  two class means divided by the pooled within-class spread.  Being a ratio, it
-  cannot be improved by stretching the output, which a raw distance can.
-
-The window positions and labels come from the saved run, through the same
-loader the encoding ablation uses, so this sits on the manuscript's own data.
+Measure the geometry of the four angular mappings on the scored windows.
 
 Run from inside this folder:
 

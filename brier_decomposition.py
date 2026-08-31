@@ -3,21 +3,7 @@
 brier_decomposition.py
 ======================
 
-Answers Reviewer 3 point 5 on converting anomaly scores into rank-based
-pseudo-probabilities and evaluating them with Brier loss.
-
-Murphy decomposition:  BS = reliability - resolution + uncertainty
-
-reliability   miscalibration; zero is perfect
-resolution    how far the forecasts move away from the base rate; larger is
-              better
-uncertainty   fixed by the class balance; no method can change it
-
-The rank transform spreads forecasts uniformly over the unit interval whatever
-the event frequency, so it is miscalibrated by construction. This script
-measures the size of that miscalibration and compares every detector with two
-baselines: a random score put through the same rank transform, and a constant
-forecast at the base rate.
+Decompose the Brier loss and compare it with a constant forecast.
 
 Run
     python brier_decomposition.py
@@ -43,9 +29,7 @@ EPISODES = {"COVID-19": "results_covid", "Russia-Ukraine": "results_russia",
             "Chinese real estate": "results_chinese", "Iran 2025": "results"}
 ASSETS = ["USOIL", "GOLD", "EURUSD"]
 EXCLUDE = {"standalone_tadgan"}      # scored on windows of 100, not 32
-# The detectors the manuscript uses, pinned here. Without this the script
 # would pick up any directory added later under the results tree and the
-# output would stop matching the manuscript.
 PAPER_METHODS = {
     "anomaly_transformer", "autoencoder", "cnn_autoencoder", "dagmm",
     "deep_svdd", "hybrid2", "isolation_forest", "omnianomaly",

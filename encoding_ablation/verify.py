@@ -3,22 +3,7 @@
 verify.py
 =========
 
-Checks that this folder reproduces the results it ships with.
-
-Two kinds of number are checked differently, and the difference matters.
-
-    exact       the mapping profile, the linear probe and the distance to the
-                mean normal image are closed-form. They must agree to twelve
-                decimal places on any machine. If they do not, something in the
-                data or the encoding has changed and every other number here is
-                suspect.
-
-    trained     the classifier and the two f-AnoGAN variants are fitted with
-                stochastic gradient descent. They are seeded, so a rerun on the
-                same build of PyTorch reproduces them closely, but a different
-                build, a different thread count or different hardware will move
-                the last decimals. These are checked against a tolerance, and
-                the tolerance is reported rather than hidden.
+Check the ablation output against the saved reference values.
 
 Run
     python verify.py

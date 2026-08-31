@@ -3,32 +3,7 @@
 threshold_sweep.py
 ==================
 
-How much of the reported performance depends on where the alarm threshold was
-put? Reviewer 4, point 9.
-
-The manuscript fixes the alarm at the 0.95 quantile of the training scores and
-reports the metrics that follow. Stating one threshold does not show that the
-conclusion survives a different one, which is what the Reviewer asked for.
-
-Nothing is retrained here. Every detector's per-window score is already stored,
-so the sweep is a recomputation and is exact: run it twice on any machine and
-the output files are identical to the byte.
-
-Two ways of setting the threshold are swept, because they answer different
-questions.
-
-    control     the quantile is taken on the crash-free 2019 control, so the
-                threshold is set by a target false-alarm rate away from any
-                crash. This is the operating point a user would actually pick,
-                and it makes the detectors comparable to each other.
-    test        the quantile is taken on the scores of the episode being
-                judged. This is closer to what the manuscript did, and it is
-                reported so the two can be compared, but it uses the test
-                period to set its own threshold and so flatters every method.
-
-AUC and average precision are reported beside the threshold-dependent metrics.
-They do not move with the threshold at all, which is the point: if a conclusion
-holds under one and not the other, it was a statement about the threshold.
+Sweep the alarm threshold across quantiles and report the metrics.
 
 Run
     python threshold_sweep.py
@@ -44,9 +19,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 RUN = os.path.join(os.path.dirname(HERE), "Iran_new_run")
 OUT = os.path.join(HERE, "output")
 
-# The detectors the manuscript reports, pinned. Without this the sweep would
 # pick up any directory added later under the results tree and would stop
-# matching the manuscript.
 PAPER_METHODS = [
     "anomaly_transformer", "autoencoder", "cnn_autoencoder", "dagmm",
     "deep_svdd", "hybrid2", "isolation_forest", "omnianomaly",

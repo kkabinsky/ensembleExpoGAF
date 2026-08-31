@@ -3,52 +3,7 @@
 lstm_ablation.py
 ================
 
-The LSTM component of the TadGAN front end. Reviewer 4, point 6, which asks for
-a component-wise ablation of TadGAN, LSTM, GAF and f-AnoGAN.
-
-The program runs two checks, and the first one costs nothing.
-
-Check one: is the recurrent layer recurrent?
-    In `improved_tadgans_anomaly2.py` the encoder reshapes its input with
-
-        x = x.view(-1, 1, self.signal_shape)
-
-    so the LSTM receives a sequence of length one whose single element is the
-    whole window. An LSTM run over one timestep has nothing to carry from one
-    step to the next: its forget and output gates fire once, on the initial
-    zero state, and the result is a gated affine function of that one vector.
-    The decoder does the same, on a sequence of length one in latent space.
-    Both are declared bidirectional, which over a single step means the two
-    directions see the same input.
-
-    This check verifies that claim on the code as it stands rather than
-    asserting it: it feeds the encoder a batch, reverses the window along its
-    time axis, and compares. A layer that used the order of the observations
-    could not return the same thing for both. It also confirms the sequence
-    length reaching the LSTM is one.
-
-Check two: does replacing it change the result?
-    Three front ends are trained on the same windows with the same seeds and
-    the same budget, and their reconstruction errors are compared as anomaly
-    scores:
-
-        lstm    the published encoder and decoder, unchanged
-        gru     the same shapes with the recurrent cell swapped for a GRU
-        linear  the same shapes with the recurrent cell replaced by an affine
-                layer of matched output width, which is what check one predicts
-                the LSTM is already equivalent to
-
-    If the three agree within the spread across seeds, the recurrent unit is
-    not contributing and the manuscript should say so.
-
-    The budget here is smaller than the published one, and deliberately so: the
-    question is whether the three front ends differ from each other under
-    identical treatment, not what the best attainable score is. The setting is
-    written into every row.
-
-Stopping and resuming
-    Every finished cell is written immediately. Interrupt it and rerun the same
-    command: it continues from the next unfinished cell.
+Substitute the recurrent cell in the front end and compare the result.
 
 Run
     python lstm_ablation.py --check-only        the free structural check

@@ -3,17 +3,12 @@
 plot_backtest_new.py
 ====================
 
-The bar charts of the manuscript redrawn from `backtest_new.py`, in the layout
-of the published figures: one panel per asset, one bar per detector, the bar
-height the final cumulative return over the test window, the value printed
-above each bar, and the endpoint count and date range above each panel.
-
-What differs from the published figures is the rule, and it is stated on the
-figure itself.
+Draw the per-episode bar figures from the backtest output.
 
 Outputs, all under output/
     backtest_bar_<event>_new.png and .pdf    one figure per episode
     iran_2025_2026_<rule>_6panels_new.pdf    the replacement for Figure 3
+
 
 Run
     python plot_backtest_new.py

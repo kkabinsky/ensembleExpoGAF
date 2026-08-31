@@ -3,18 +3,7 @@
 window_size_check.py
 ====================
 
-Does the window length change the result? Answers Reviewer 4 point 9 on the
-one-class scorer.
-
-The image size is held at 32x32 for every window length, so the network and its
-parameter count are identical throughout and only the span of history summarised
-by one image changes. The set of window start positions is also held fixed, so
-the test dates coincide and the comparison is paired cell by cell.
-
-AUC is not comparable across window lengths: a window is labelled positive when
-it overlaps the event interval, so a longer window is labelled positive more
-often and the effective sample size falls as the window lengthens. Both are
-reported beside the AUC and must be read with it.
+Sweep the rolling-window length under the one-class scorer.
 
 Run
     python window_size_check.py

@@ -3,34 +3,7 @@
 leadtime_far_matched.py
 =======================
 
-Compare lead time with every detector held at the same false-alarm rate.
-
-Why this had to be rewritten
-----------------------------
-The earlier lead-time tables used the predicted_label column shipped with each
-result file, and each method had set its own threshold. Measured on the
-crash-free 2019 control the resulting false-alarm rates were:
-
-    deep_svdd            89.3 %
-    autoencoder          73.4 %
-    anomaly_transformer  48.5 %
-    hybrid2 (ExpoGAF)    16.9 %
-    tranad                3.4 %
-
-A method that alarms most of the time will always show a long lead time,
-because it was already alarming. Comparing lead times without holding the
-false-alarm rate fixed therefore means nothing, and the advantage ExpoGAF
-appeared to hold over TranAD may reflect nothing more than alarming five times
-as often.
-
-What this script does instead
-    1. sets each method's threshold on the crash-free control, not on the test
-       set; setting it on the test set uses information from the future, which
-       is the point Reviewer 3 raises about threshold calibration
-    2. forces every method to the same false-alarm rate before reading lead time
-    3. adds a persistence rule: k consecutive windows above the threshold before
-       an alarm counts, which removes lead times created by a single spike
-    4. tests the paired differences across cells with Holm correction
+Compare lead time with every detector held to a common false-alarm rate.
 
 Run
     python leadtime_far_matched.py
@@ -70,9 +43,7 @@ ASSETS = {"USOIL": "USOIL_daily_final2.xlsx",
 WINDOW = 32
 CORE = ("hybrid2", "exponential")          # the core ExpoGAF configuration
 ABLATION = ["standalone_tadgan", "tadgan_stage", "standalone_fanogan", "hybrid2"]
-# The detectors the manuscript uses, pinned here. Without this the script
 # would pick up any directory added later under the results tree and the
-# output would stop matching the manuscript.
 PAPER_METHODS = {
     "anomaly_transformer", "autoencoder", "cnn_autoencoder", "dagmm",
     "deep_svdd", "hybrid2", "isolation_forest", "omnianomaly",

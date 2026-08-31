@@ -3,49 +3,13 @@
 backtest_new.py
 ===============
 
-The financial evaluation recomputed in the layout of Table 3 and Figure 3 of
-the manuscript, under a rule that pays for early warning and with the alarm
-rates held together.
-
-It reads the same files the published figure reads: the per-window alarms saved
-under `Iran_new_run/results*/<asset>/<detector>/exponential/test_scores.csv`,
-one directory per crash episode plus the crash-free 2019 control. Nothing is
-refitted.
-
-Three checks are printed before any new result, so that a reader can see this
-program lands on the published numbers before it changes anything: the
-Buy-and-Hold column, the ExpoGAF column and the majority-alarm column of
-Table 3, all eighteen cells each. The majority alarm is rebuilt only for that
-check and is left out of the tables and figures; --keep-majority puts it back.
-
-What changes, and why
----------------------
-
-1.  The rule. Under the published rule the position moves to cash on any day
-    carrying an alarm, which pays the same whether the alarm arrives before the
-    fall or after it. The framework's stated purpose is early warning, so
-    `first_alarm` holds the asset until the first alarm and then stays in cash
-    to the end of the test window: only the date of the first alarm matters.
-    `persist` is a middle course that leaves after k alarms in a row and
-    returns after m clear days.
-
-2.  The alarm rates. A detector that fires on a third of all days sits in cash
-    on a third of all days, and in a falling market that alone earns a positive
-    excess return; the saved alarm rates differ by a factor of several between
-    detectors. Alongside the published thresholds, this program also sets each
-    detector's threshold on the crash-free 2019 control so that all of them
-    alarm at the same rate away from a crash, at three such rates.
-
-Conventions kept from the published backtest
-    the decision for a window is taken at its last observation, `window_end`,
-    and earns the return from that day to the next; daily returns are clipped
-    at plus or minus 60 per cent, which matters because WTI settled at minus
-    37.63 dollars on 20 April 2020 and a simple return is undefined there.
+Compute the financial evaluation from the saved per-window alarms.
 
 Output, all under output/
     backtest_new_cells.csv    every cell, threshold mode, rule and detector
     bar_values_new.csv        the value behind every bar in the figures
     table_financial_new.tex   the replacement for Table 3
+
 
 Run
     python backtest_new.py
@@ -103,7 +67,6 @@ ONSET = {"COVID-19": "2020-02-20", "Russia--Ukraine": "2022-02-11",
          "Chinese": "2023-08-07", "Iran 2025": "2025-06-12",
          "Iran 2026": "2026-06-12"}
 
-# Table 3 of the manuscript: Buy-and-Hold, Delta EXP, Delta ENS-H.
 PUBLISHED = {
     ("COVID-19", "USOIL"): (-78.9, -1.5, -1.7),
     ("COVID-19", "GOLD"): (26.3, -10.2, -10.9),

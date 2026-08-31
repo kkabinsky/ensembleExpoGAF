@@ -3,20 +3,7 @@
 mapping_significance.py
 =======================
 
-The mapping ordering changes on the corrected pipeline and the exponential map
-moves to first place. This script asks whether that lead is large enough to
-report as a difference, or whether it is within sampling variation.
-
-Three tests, because they answer different questions:
-
-1. Diebold-Mariano on per-window Brier loss, with a Newey-West correction at
-   lag 31 for the overlap between adjacent windows, then Holm correction over
-   the three comparisons.
-2. A paired sign test with the episode-asset cell as the unit, which is the
-   conservative reading given how little independent information the windows
-   carry.
-3. Friedman across all four mappings, to ask whether they differ at all as a
-   set.
+Test the differences between angular mappings: Newey-West DM, sign test, Friedman.
 
 Run
     python mapping_significance.py

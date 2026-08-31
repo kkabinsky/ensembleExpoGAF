@@ -3,8 +3,10 @@
 standalone_tadgan_w32.py
 ========================
 
+Score the TadGAN front end alone at window length 32.
+
 Run the standalone TadGAN arm at window 32 so that it is comparable with every
-other arm. Answers Reviewer 4 point 6, which names TadGAN directly.
+other arm.
 
 Why it had to be rerun
     The stored standalone TadGAN arm used windows of 100 observations while
@@ -37,6 +39,7 @@ interval is a contiguous block. A control is therefore included:
 
 If a detector does not beat that control, what it has captured is the passage
 of time, not market stress, and its figure must not be reported as detection.
+
 
 Run
     python standalone_tadgan_w32.py

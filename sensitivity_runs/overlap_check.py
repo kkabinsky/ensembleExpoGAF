@@ -3,33 +3,7 @@
 overlap_check.py
 ================
 
-How much independent information is there, and what does the reported number
-actually cost in precision? Reviewer 4, point 4.
-
-Windows advance by one observation and are 32 long, so neighbouring windows
-share 31 of their 32 values. The 1,589 scored windows are not 1,589
-observations. Saying so is not enough: this program measures what it does to
-the numbers.
-
-The measurement needs no retraining. Every detector's per-window score is
-already stored, and windows whose starts differ by a multiple of 32 share no
-observation at all. Splitting each cell by the start position modulo 32
-therefore produces 32 subsets, each internally independent, that between them
-use every window exactly once.
-
-    reported     the AUC on the full overlapping set, as in the manuscript
-    per offset   the AUC on each of the 32 independent subsets
-    spread       the standard deviation across those 32 subsets
-
-The third of these is the honest uncertainty of the first. The full set holds
-no more independent information than one subset does, so its AUC carries
-roughly the sampling error of a subset, not the much smaller error that its
-window count suggests. The ratio between the two is printed for every cell.
-
-The same split shows whether the difference between episodes is real. If
-COVID-19 reads well and the Chinese and Iran episodes read poorly, the question
-is whether that gap is larger than the gap between two independent subsets of
-the same episode.
+Measure how many independent observations the overlapping windows carry.
 
 Run
     python overlap_check.py

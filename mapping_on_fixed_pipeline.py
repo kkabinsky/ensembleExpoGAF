@@ -3,17 +3,7 @@
 mapping_on_fixed_pipeline.py
 ============================
 
-Compare the four angular mappings on the corrected pipeline.
-
-Why this exists
-    The mapping ordering the manuscript reports came from the earlier pipeline,
-    in which the two arms carried identical scores in all 72 cells and therefore
-    compared nothing. The corrected runner trains both arms in one round with
-    identical settings. The question is whether the ordering survives once the
-    comparison is real.
-
-Only cells finished on both arms are read; unfinished cells are skipped, so the
-script can be run while a sweep is still in progress and will show what exists.
+Compare the four angular mappings on one pipeline with settings held fixed.
 
 Run
     python mapping_on_fixed_pipeline.py

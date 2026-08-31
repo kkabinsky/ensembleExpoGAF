@@ -2,29 +2,7 @@
 component_ablation.py
 =====================
 
-Answers Reviewer 4 point 6 (component-wise ablation) and point 4 (overlapping
-windows are not independent), as far as the stored results allow, without
-retraining anything.
-
-Separable from the stored results
-    TadGAN front end : hybrid2 (TadGAN -> GAF -> f-AnoGAN) against
-                       standalone_fanogan (GAF -> f-AnoGAN on raw prices)
-                       at the same mapping, so only TadGAN differs
-    Angular mapping  : cosine / arctan / arccosh / exponential
-
-Not separable without new runs
-    LSTM       No LSTM output is stored anywhere. A search for "*lstm*" across
-               every results directory returns nothing, which matches Reviewer 1
-               point 10. This has to be declared, not answered around.
-    f-AnoGAN   No comparable TadGAN-only arm exists. standalone_tadgan is
-               present but was scored on windows of 100 observations rather than
-               32, so it is a different unit of analysis.
-
-Point 4, overlapping windows
-    Windows are 32 observations long and advance by one, so adjacent windows
-    share 31 of their 32 values. Two estimates of the effective sample size:
-      (a) from the overlap          n_eff = n / 32
-      (b) from the lag-1 autocorrelation  n_eff = n (1-rho) / (1+rho)
+Compute the effective sample size implied by the window overlap.
 
 Run
     python component_ablation.py

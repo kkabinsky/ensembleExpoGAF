@@ -1,37 +1,9 @@
 # -*- coding: utf-8 -*-
-"""Closed-form properties of the four angular mappings, checked numerically.
+"""
+mapping_derivation.py
+=====================
 
-Reviewer 4 asked for verification of the mathematical claims.  The companion
-script ``mapping_geometry.py`` measures the geometry on real windows; this one
-derives the same properties in closed form and confirms each derivation against
-a numerical evaluation, so that the claims in the manuscript rest on algebra
-rather than on a fitted number.
-
-Mappings, on the min-max normalised window s in [0, 1]:
-
-    cosine       g(s) = arccos(2s - 1)          g'(s) = -2 / sqrt(1 - (2s-1)^2)
-    arctan       g(s) = arctan(s)               g'(s) = 1 / (1 + s^2)
-    arccosh      g(s) = arccosh(1 + s)          g'(s) = 1 / sqrt(s^2 + 2s)
-    exponential  g(s) = pi (e^s - 1) / (e - 1)  g'(s) = pi e^s / (e - 1)
-
-Three statements are proved and printed with their numerical check:
-
-1.  Range.  g(0) = 0 and g(1) = pi for the exponential map, exactly, since
-    (e^1 - 1)/(e - 1) = 1.  For arctan the range is [0, pi/4] and for arccosh
-    it is [0, arccosh 2] = [0, ln(2 + sqrt 3)].
-
-2.  Rising resolution.  g'(s) = pi e^s / (e - 1) is strictly increasing because
-    e^s is, so the exponential map is the only one of the four whose angular
-    resolution grows with the value being encoded.  The growth factor across
-    the window range is exactly g'(1) / g'(0) = e.  For arctan and arccosh the
-    derivative is strictly decreasing; for the cosine map it is negative.
-
-3.  Fold.  The Gramian entry is cos(phi_i + phi_j), which is not injective once
-    the pair sum passes pi.  The maximum pair sum is 2 g(1): it is 2 pi for the
-    exponential and cosine maps, pi/2 for arctan and 2 arccosh 2 = 2.634 for
-    arccosh.  Only the first two exceed pi, so only they can fold.  For the
-    exponential map the fold condition in terms of the normalised values is
-    exactly e^{s_i} + e^{s_j} > e + 1.
+Print the closed-form properties of the four angular mappings beside a numerical check.
 
 Run:
 

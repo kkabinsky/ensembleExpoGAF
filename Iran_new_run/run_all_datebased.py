@@ -1,15 +1,16 @@
 # -*- coding: utf-8 -*-
-"""Iran-war 2025 crash, DATE-BASED test window (test starts BEFORE the crash so
-early-warning / positive lead time is possible) -- same standard as the U30/U500/DAX
-and old-crash runs. Runs the full set on USOIL/GOLD/EURUSD:
+"""
+run_all_datebased.py
+====================
 
-    8 baselines  |  standalone GAF->f-AnoGAN (ExpoGAF)  |  standalone TadGAN  |  hybrid2
-
-Every method saves test_scores.csv with a window_end column, so lead time =
-onset_idx - first-signal window_end (positive = warned before the crash).
+Run the date-based pipeline for every asset, episode and angular mapping.
 
 Output: results/<ASSET>/<method>/<mapping>/test_scores.csv (+ metrics_summary.csv)
     set ALLOW_CPU=1 & set N_EPOCHS_GAN=50 & set N_EPOCHS_ENC=50 & set TADGAN_EPOCHS=50
+    python run_all_datebased.py
+
+Run
+
     python run_all_datebased.py
 """
 import os, sys

@@ -3,30 +3,7 @@
 supplementary_metrics.py
 ========================
 
-Rebuilds Supplementary Tables S1 to S3 as Reviewer 3 point 4 and Reviewer 4
-point 3 ask.
-
-Reviewer 3 point 4
-    S1 to S3 report neither the number of observations nor the split between
-    positive and negative windows, and score performance by accuracy alone,
-    which is misleading under class imbalance. Precision, recall, F1, balanced
-    accuracy and AUC are requested.
-
-Reviewer 4 point 3
-    PR-AUC is requested as well, for the same reason.
-
-Everything is computed from the per-window scores already stored, so no model
-is retrained and every figure traces back to the run that produced the
-submitted tables.
-
-What to know before reading the output
---------------------------------------
-standalone_tadgan is excluded. It was scored on windows of 100 observations
-while every other method uses 32. A longer window overlaps the event interval
-more readily, so its positive counts differ: COVID-19 EURUSD carries 94 against
-74 for every other method. That is a different unit of analysis, not a
-labelling error, and the two cannot be compared. Its lead-time figures are
-withdrawn on the same grounds. To bring it back, rescore it at window 32.
+Compute the per-cell counts, class balance and full metric set.
 
 Run
     python supplementary_metrics.py
@@ -58,9 +35,7 @@ ASSETS = ["USOIL", "GOLD", "EURUSD"]
 
 # excluded: its window length differs from every other method, see above
 EXCLUDE = {"standalone_tadgan"}
-# The detectors the manuscript uses, pinned here. Without this the script
 # would pick up any directory added later under the results tree and the
-# output would stop matching the manuscript.
 PAPER_METHODS = {
     "anomaly_transformer", "autoencoder", "cnn_autoencoder", "dagmm",
     "deep_svdd", "hybrid2", "isolation_forest", "omnianomaly",
@@ -258,7 +233,6 @@ def main():
         print("Excluded: standalone_tadgan (window 100, not 32), %d times"
               % len(skipped))
 
-    # counts and class balance, the first thing Reviewer 3 asked for
     counts = (df.groupby(["episode", "asset"])
                 .agg(n_windows=("n_windows", "max"),
                      n_positive=("n_positive", "max"),

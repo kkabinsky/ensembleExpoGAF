@@ -2,21 +2,7 @@
 dm_test_mappings.py
 ===================
 
-Diebold-Mariano between the four angular mappings, under both scorers.
-
-Windows are 32 observations long and advance by one, so adjacent windows share
-31 of their 32 values and the loss differential is strongly autocorrelated. A
-plain variance understates the standard error, so every statistic is computed
-twice: once at lag 0 as the submitted version did, and once with a Newey-West
-estimator at lag 31. Holm correction is applied over the six pairs.
-
-Two scorers, because they disagree:
-    f-AnoGAN     one-class, from the stored scores, nothing retrained
-    CNN          supervised, leave-one-episode-out
-
-The script also reports, per episode, how many pairs would look significant at
-lag 0 but do not survive at lag 31. That difference is the size of the error
-made by ignoring the overlap.
+Test the differences between angular mappings under each scorer.
 
 Run
     python dm_test_mappings.py

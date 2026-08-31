@@ -3,30 +3,11 @@
 models.py
 =========
 
-The three networks the ablation compares, and the training loops for them.
+Network definitions and the training loop shared by the ablation programs.
 
-    classifier      the supervised convolutional network of the window sweep
-    fanogan_paper   the f-AnoGAN of the manuscript, reproduced here so that
-                    this folder stands alone; the parameter counts are asserted
-                    against the published ones at import
-    fanogan_compact the same objective with the networks resized to the data
-                    and with every normalisation layer removed
+Run
 
-Why the compact variant exists
-    The published generator and encoder each carry three batch-normalisation
-    layers. BatchNorm rescales activations to unit variance, and the variance
-    of the encoded image is precisely what separates the four angular mappings:
-    0.626 for the exponential map against 0.248 for arctan. The published
-    networks also carry about 2.8 million parameters each and are fitted on
-    roughly six hundred 32x32 images per fold, where the distance to the mean
-    normal image already reaches a higher AUC than they do. The compact variant
-    is about thirty times smaller and carries no normalisation layer, so the
-    contrast of the encoding reaches the anomaly score.
-
-Both variants use the same objective: WGAN-GP with five critic steps and
-gradient penalty weight 10, then an encoder fitted against the frozen generator
-and critic, then a score of reconstruction error plus the critic's feature
-residual.
+    python models.py
 """
 import numpy as np
 import torch

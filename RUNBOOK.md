@@ -26,15 +26,10 @@ average precision or AUC is computed.
 
 ## A note on the pinned method list
 
-Three programs used to discover detectors by listing directories. After the
-corrected pipeline was run, two new directories appeared and those programs
-silently picked them up: the tables grew from thirteen detectors to fifteen and
-the event-positive count rose by one in twelve of the fifteen cells, so
-COVID-19 USOIL read 74 positives instead of the 73 the manuscript reports.
 `supplementary_metrics.py`, `brier_decomposition.py` and
-`leadtime_far_matched.py` now carry an explicit `PAPER_METHODS` set and ignore
-anything outside it. Do not edit that set: it is what makes the output match the
-manuscript.
+`leadtime_far_matched.py` carry an explicit `PAPER_METHODS` set and ignore any
+directory outside it. Do not edit that set: the detector list and the
+event-positive counts depend on it.
 
 ## The programs
 
@@ -106,9 +101,8 @@ of 0.881.
 Reads the episode directories, restricted to `PAPER_METHODS`.
 Writes `brier_decomposition.csv`, 684 rows.
 
-Murphy decomposition of the Brier evaluation. Expect every detector to score
-worse than a constant forecast at the base rate of 0.2461, which is why the
-Brier evaluation is withdrawn in this revision.
+Murphy decomposition of the Brier evaluation. Every detector scores worse than
+a constant forecast at the base rate of 0.2461.
 
 ### 7. `mapping_on_fixed_pipeline.py` — exactly reproducible, about 1 second
 
