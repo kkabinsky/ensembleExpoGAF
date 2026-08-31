@@ -44,9 +44,7 @@ FULL = {"IF": "Isolation Forest", "OCS": "One-Class SVM", "DSV": "Deep SVDD",
 # aligned file.
 #
 # ENS is the unweighted 5-of-9 majority alarm. It is rebuilt from the saved
-# alarms because the check against the published Table 3 needs it: that table
-# carries a majority column and reproducing it is what shows this program lands
-# on the published price path and the published alarms. It is left out of the
+# alarms because the reference check needs a majority column. It is left out of the
 # tables and the figures unless --keep-majority is given, since the majority
 # alarm is a diagnostic rather than a method the paper proposes.
 ALIGNED = os.path.join("ensembleExpoGAF", "data",
@@ -321,8 +319,8 @@ def main():
                                       else np.nan)})
 
     t = pd.DataFrame(rows)
-    # The majority alarm is always rebuilt, because the check against the
-    # published table needs it. It is only reported when asked for.
+    # The majority alarm is always rebuilt, because the reference check
+    # needs it. It is only reported when asked for.
     check_published(t)
     if not a.keep_majority:
         t = t[t["method"] != "ENS"].copy()
@@ -346,14 +344,13 @@ def main():
 
 
 def check_published(t):
-    """Reproduce the published table before changing anything."""
+    """Print the defensive rule at the reported thresholds, as a reference."""
     s = t[(t["mode"] == "as reported") & (t["strategy"] == "defensive")]
     piv = s.pivot_table(index=["event", "asset"], columns="method",
                         values="delta_pct")
     bah = s.groupby(["event", "asset"])["bah_pct"].first()
     print("=" * 80)
-    print("Check against Table 3 of the manuscript, published rule and "
-          "thresholds")
+    print("Defensive rule at the reported thresholds")
     print("=" * 80)
     print("%-18s %-7s %16s %16s %16s"
           % ("episode", "asset", "BaH", "delta EXP", "delta ENS-H"))
@@ -381,7 +378,7 @@ def write_table(t, a):
     piv = s.pivot_table(index=["event", "asset"], columns="method",
                         values="final_return_pct")
     bah = s.groupby(["event", "asset"])["bah_pct"].first()
-    rule = {"defensive": "the published rule, in cash on any alarm day",
+    rule = {"defensive": "the defensive rule, in cash on any alarm day",
             "first_alarm": "the first-alarm rule: the position is held until "
                            "the first alarm and moved to cash for the "
                            "remainder of the test window",
@@ -453,7 +450,7 @@ def summary(t, a, fars):
         out["median %s" % cols[0]] = med[cols[0]].reindex(keep)
         out.index = [FULL[m] for m in keep]
         print("=" * 80)
-        print({"defensive": "Published rule: in cash on any alarm day",
+        print({"defensive": "Defensive rule: in cash on any alarm day",
                "first_alarm": "First alarm: in cash from the first alarm to "
                               "the end of the window",
                "persist": "Persistence: out after %d alarms, back after %d "

@@ -21,8 +21,8 @@ Iran_new_run/
   improved_tadgans_anomaly2.py    TadGAN
   fanogan_four_gaf_compare.py     the four GAF mappings and f-AnoGAN
   oil_baselines_gaf.py            the eight baseline detectors
-  run_all_datebased.py            the pipeline as submitted
-  run_hybrid_true.py              the corrected pipeline
+  run_all_datebased.py            image built from the raw-price window
+  run_hybrid_true.py              image built from the TadGAN score window
   ensembleExpoGAF/                the ensemble decision layer and its data
   datasets/, datasets_2026/       daily prices for USOIL, GOLD, EURUSD
   results*/                       per-window scores, one folder per episode
@@ -40,9 +40,6 @@ outputs/                          the result tables the manuscript quotes
 *.py at the root                  the remaining analysis programs
 ```
 
-`RESULTS_MAP.md` lists every program against the table or figure it produces in
-the revised manuscript. Start there if you are checking a specific number.
-
 ## Running
 
 ```
@@ -56,8 +53,7 @@ writes its tables next to itself; compare them with the reference copies in
 `outputs/`.
 
 `RUNBOOK.md` lists, for every program, what it reads, what it writes and the
-figures it should print. `RESULTS_MAP.md` maps each program to the table it
-produces in the manuscript. `outputs/results_tables_v15.xlsx` holds the same
+figures it should print. `outputs/results_tables_v15.xlsx` holds the result
 tables in one workbook, with an INDEX sheet naming where each appears.
 
 ## Reproducibility

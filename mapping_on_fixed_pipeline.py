@@ -116,8 +116,8 @@ else:
            "exponential": 0.4849}
     old_order = sorted(OLD, key=OLD.get, reverse=True)
     new_order = list(p.mean().sort_values(ascending=False).index)
-    print("  earlier pipeline   %s" % "  >  ".join(old_order))
-    print("  corrected pipeline %s" % "  >  ".join(new_order))
+    print("  raw-price arm      %s" % "  >  ".join(old_order))
+    print("  score-window arm   %s" % "  >  ".join(new_order))
     print()
     if old_order == new_order:
         print("  ordering unchanged")

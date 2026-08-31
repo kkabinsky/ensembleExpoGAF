@@ -45,10 +45,7 @@ NUDGE = {"IF": (7, -12), "OMNI": (7, 6), "AT": (-4, 10), "ENST": (8, -4),
 BASE_C = "#6f8da2"
 EXP_C = "#cf4358"
 ENS_C = "#7b4ea3"
-# The legend states what each rule does rather than what it is called. The
-# manuscript calls the first one the Defensive strategy, but a reader meeting
-# that word in a legend cannot tell what it means, and the earlier wording,
-# "published rule", read as though it concerned publication.
+# The legend states what each rule does rather than what it is called.
 RULES = [("defensive", "Cash on any alarm day"),
          ("first_alarm", "Cash from the first alarm on")]
 
