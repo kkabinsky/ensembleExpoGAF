@@ -1,12 +1,7 @@
 # ExpoGAF-AnoNet
 
-Code and result files for:
-
-> **ExpoGAF-AnoNet: A Layered Generative Framework with Exponential Gramian
-> Angular Encoding for Detecting Anomalous Market Disorders During Major Crash
-> Periods**
-> Kabin Kanjamapornkul and Theepakorn Jithitikulchai
-> Faculty of Economics, Thammasat University
+ExpoGAF-AnoNet: A Layered Generative Framework with Exponential Gramian Angular
+Encoding for Detecting Anomalous Market Disorders During Major Crash Periods.
 
 The model code, the analysis code, the per-window scores and the price series.
 Clone it and the analysis programs run without editing a path.
