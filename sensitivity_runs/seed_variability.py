@@ -1,13 +1,12 @@
 # -*- coding: utf-8 -*-
 """
 seed_variability.py
-===================
 
 Repeat the trained stage at several seeds and report the spread.
 
 Run
-    python seed_variability.py --seeds 5
-    python seed_variability.py --seeds 5 --episodes covid,russia
+
+    python seed_variability.py
 """
 import argparse
 import os

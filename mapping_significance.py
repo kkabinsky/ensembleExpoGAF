@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 """
 mapping_significance.py
-=======================
 
-Test the differences between angular mappings: Newey-West DM, sign test, Friedman.
+Newey-West DM, sign test and Friedman between angular mappings.
 
 Run
+
     python mapping_significance.py
 """
 import io

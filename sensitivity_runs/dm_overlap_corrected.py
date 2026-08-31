@@ -1,22 +1,12 @@
 # -*- coding: utf-8 -*-
 """
 dm_overlap_corrected.py
-=======================
 
-Compute the pairwise Diebold-Mariano matrix with a Newey-West long-run standard error and the Holm adjustment.
+Pairwise Diebold-Mariano with a Newey-West standard error and Holm adjustment.
 
-Inputs, both shipped in the repository:
-
-    ensembleExpoGAF/data/aligned_probabilities_9methods.csv   loss_<M> per window
-    ensembleExpoGAF/data/aligned_hard_predictions_10methods.csv  loss_ENS
-
-
-Run:
+Run
 
     python dm_overlap_corrected.py
-
-Writes ``output/dm_overlap_corrected.csv`` with one row per ordered pair, and
-prints the LaTeX body of the corrected matrix.
 """
 import itertools
 import math

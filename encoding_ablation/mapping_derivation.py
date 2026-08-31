@@ -1,11 +1,10 @@
 # -*- coding: utf-8 -*-
 """
 mapping_derivation.py
-=====================
 
-Print the closed-form properties of the four angular mappings beside a numerical check.
+Closed-form properties of the four angular mappings, with a numerical check.
 
-Run:
+Run
 
     python mapping_derivation.py
 """

@@ -1,19 +1,12 @@
 # -*- coding: utf-8 -*-
 """
 backtest_new.py
-===============
 
-Compute the financial evaluation from the saved per-window alarms.
-
-Output, all under output/
-    backtest_new_cells.csv    every cell, threshold mode, rule and detector
-    bar_values_new.csv        the value behind every bar in the figures
-    table_financial_new.tex   the replacement for Table 3
-
+Financial evaluation from the saved per-window alarms.
 
 Run
+
     python backtest_new.py
-    python backtest_new.py --headline first_alarm --headline-mode far0.10
 """
 import argparse
 import os

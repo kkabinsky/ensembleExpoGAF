@@ -1,13 +1,12 @@
 # -*- coding: utf-8 -*-
 """
 lambda_sweep.py
-===============
 
-Repeat the encoding comparison at several gradient-penalty weights.
+Encoding comparison repeated at several gradient-penalty weights.
 
 Run
+
     python lambda_sweep.py
-    python lambda_sweep.py --lambdas 1,2,5,10 --seeds 3
 """
 import argparse
 import os

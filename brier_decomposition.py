@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 """
 brier_decomposition.py
-======================
 
-Decompose the Brier loss and compare it with a constant forecast.
+Murphy decomposition of the Brier loss against a constant forecast.
 
 Run
+
     python brier_decomposition.py
 """
 import argparse

@@ -1,10 +1,10 @@
 """
 dm_test_mappings.py
-===================
 
-Test the differences between angular mappings under each scorer.
+Diebold-Mariano between angular mappings under each scorer.
 
 Run
+
     python dm_test_mappings.py
 """
 import argparse

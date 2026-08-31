@@ -1,20 +1,16 @@
 # -*- coding: utf-8 -*-
 """
 plot_summary.py
-===============
 
-Draw the two-panel summary figure from the backtest output.
+Two-panel summary figure from the backtest output.
 
-Output
-
-output/backtest_summary.jpg
-
-output/backtest_summary.pdf
-
+Writes
+    output/backtest_summary.jpg
+    output/backtest_summary.pdf
 
 Run
+
     python plot_summary.py
-    python plot_summary.py --mode far0.10
 """
 import argparse
 import os

@@ -1,29 +1,18 @@
 # -*- coding: utf-8 -*-
 """
 bootstrap_ci.py
-===============
 
-Compute circular moving-block bootstrap intervals for F1 and AUC.
+Circular moving-block bootstrap intervals for F1 and AUC.
 
-Inputs, both shipped in the repository:
-
-    ensembleExpoGAF/data/iran2025_probabilities_9methods.csv
+Reads
     ensembleExpoGAF/data/iran2025_hard_predictions_9methods.csv
-    ensembleExpoGAF/data/iran2026_probabilities_9methods.csv
+    ensembleExpoGAF/data/iran2025_probabilities_9methods.csv
     ensembleExpoGAF/data/iran2026_hard_predictions_9methods.csv
+    ensembleExpoGAF/data/iran2026_probabilities_9methods.csv
 
-AUC is computed from ``prob_EXP``; F1 from ``pred_EXP``, which carries the
-0.95-quantile threshold used throughout the paper.  Both files are read for
-each interval because each one holds the 200-window slice for its own event.
-
-Protocol: 5,000 replicates, block length 10, seed 42.
-
-
-Run:
+Run
 
     python bootstrap_ci.py
-
-Writes ``output/bootstrap_ci.csv`` and prints the LaTeX table body.
 """
 import os
 

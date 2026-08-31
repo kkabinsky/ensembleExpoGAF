@@ -1,13 +1,12 @@
 # -*- coding: utf-8 -*-
 """
 overlap_corrected_tests.py
-==========================
 
-Compute confidence intervals that resample contiguous blocks of windows.
+Confidence intervals that resample contiguous blocks of windows.
 
 Run
+
     python overlap_corrected_tests.py
-    python overlap_corrected_tests.py --replicates 4000 --block 32
 """
 import argparse
 import os

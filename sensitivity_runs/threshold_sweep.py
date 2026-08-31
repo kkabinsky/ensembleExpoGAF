@@ -1,13 +1,12 @@
 # -*- coding: utf-8 -*-
 """
 threshold_sweep.py
-==================
 
-Sweep the alarm threshold across quantiles and report the metrics.
+Sweep the alarm threshold across quantiles.
 
 Run
+
     python threshold_sweep.py
-    python threshold_sweep.py --quantiles 0.80,0.85,0.90,0.95,0.99
 """
 import argparse
 import os

@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 """
 mapping_on_fixed_pipeline.py
-============================
 
-Compare the four angular mappings on one pipeline with settings held fixed.
+Compare the four angular mappings with settings held fixed.
 
 Run
+
     python mapping_on_fixed_pipeline.py
 """
 import io

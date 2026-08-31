@@ -1,53 +1,15 @@
 # -*- coding: utf-8 -*-
 """
 run_hybrid_true.py
-==================
 
-Run the layered pipeline, building the image from the TadGAN score window.
+Date-based runner: the image is built from the TadGAN score window.
 
-Build the image from the TadGAN score window, on the date-based data
-that carries enough labels:
-
-    TadGAN -> anomaly score -> GAF of the score window -> f-AnoGAN
-
-Why this script exists
-----------------------
-The submitted date-based runner built the hybrid2 arm like this:
-
-    trs, tes = fanogan_scores(x_tr, x_te)      # x comes from the GAF of PRICES
-    save_cell(... "standalone_fanogan" ... tes ...)
-    save_cell(... "hybrid2"            ... tes ...)   # the same scores
-
-So hybrid2 carried exactly the same numbers as the standalone arm. TadGAN
-contributed only the quantile used to set a threshold; it was never the input to
-the GAF stage. Checking the two arms, the largest difference between their score
-series was exactly 0 in all 48 cells.
-
-This script fixes that by building the GAF image from the TadGAN scores rather
-than from the prices.
-
-What is not retrained
-    The TadGAN scores are already cached at
-    <OUT_DIR>/<asset>/tadgan_stage/out/full_scores.csv for all five episodes and
-    the control, so TadGAN is not retrained. Only f-AnoGAN is trained again, on
-    the GAF images of the scores.
-
-Index alignment
-    Score i comes from the price window ending at index i + SIG - 1 (SIG = 100).
-    The score window sc[s : s+32] therefore spans prices s+SIG-1 to s+SIG+30.
-    window_start and window_end are written as price indices so that lead time
-    remains directly comparable with the other methods.
-
-
-Output
+Reads
     <OUT_DIR>/<asset>/hybrid_true/<mapping>/test_scores.csv
-    in the same format as every other method, so the existing analysis scripts
-    read it without modification.
 
+Run
 
-Run  (same settings as the submitted date-based runner)
-    set OUT_DIR=results & set SC_CRASH_ONSET=2025-06-12 & python run_hybrid_true.py
-    python run_hybrid_true.py --episodes all
+    python run_hybrid_true.py
 """
 import argparse
 import io

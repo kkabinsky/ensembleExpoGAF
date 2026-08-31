@@ -1,10 +1,10 @@
 """
 component_ablation.py
-=====================
 
-Compute the effective sample size implied by the window overlap.
+Effective sample size implied by the window overlap.
 
 Run
+
     python component_ablation.py
 """
 import io

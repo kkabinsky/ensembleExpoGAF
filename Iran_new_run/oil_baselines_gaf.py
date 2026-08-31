@@ -1,12 +1,8 @@
 # -*- coding: utf-8 -*-
 """
 oil_baselines_gaf.py
-====================
 
 Run the eight baseline detectors on GAF images of the anomaly-score windows.
-
-Output folders mirror the main pipeline's convention:
-    .\\oil\\<method>\\<mapping>\\   (metrics_summary.csv, test_scores.csv, plots\\...)
 
 Run
 

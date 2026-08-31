@@ -1,18 +1,8 @@
 # -*- coding: utf-8 -*-
 """
 gaf_encodings.py
-================
 
-Angular mappings, GAF construction, and the window loader shared by the ablation programs.
-
-run it twice on any machine and the output is identical to the last digit.
-The parts of the experiment that do train live in `models.py`.
-
-The mappings take a window that has been scaled to [0, 1] and return an angle
-per observation; the image is cos(phi_i + phi_j), the Gramian angular field.
-They differ in how much of the [0, pi] interval they reach and in where along
-the window range they place their angular resolution, and those two properties
-turn out to matter more than anything else in this experiment.
+Angular mappings, GAF construction and the window loader.
 
 Run
 

@@ -1,13 +1,12 @@
 # -*- coding: utf-8 -*-
 """
 overlap_check.py
-================
 
-Measure how many independent observations the overlapping windows carry.
+Independent observations carried by the overlapping windows.
 
 Run
+
     python overlap_check.py
-    python overlap_check.py --methods hybrid2,tranad,one_class_svm
 """
 import argparse
 import os

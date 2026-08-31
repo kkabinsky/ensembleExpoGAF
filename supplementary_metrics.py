@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 """
 supplementary_metrics.py
-========================
 
-Compute the per-cell counts, class balance and full metric set.
+Per-cell counts, class balance and the full metric set.
 
 Run
+
     python supplementary_metrics.py
 """
 import argparse

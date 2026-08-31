@@ -1,13 +1,8 @@
 # -*- coding: utf-8 -*-
 """
 run_all_datebased.py
-====================
 
-Run the date-based pipeline for every asset, episode and angular mapping.
-
-Output: results/<ASSET>/<method>/<mapping>/test_scores.csv (+ metrics_summary.csv)
-    set ALLOW_CPU=1 & set N_EPOCHS_GAN=50 & set N_EPOCHS_ENC=50 & set TADGAN_EPOCHS=50
-    python run_all_datebased.py
+Date-based runner: the image is built from the raw-price window.
 
 Run
 

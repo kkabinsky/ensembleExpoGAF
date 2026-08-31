@@ -1,13 +1,12 @@
 # -*- coding: utf-8 -*-
 """
 lstm_ablation.py
-================
 
-Substitute the recurrent cell in the front end and compare the result.
+Substitute the recurrent cell in the front end and compare.
 
 Run
-    python lstm_ablation.py --check-only        the free structural check
-    python lstm_ablation.py --seeds 3 --epochs 40
+
+    python lstm_ablation.py
 """
 import argparse
 import os

@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 """
 cnn_window_sweep.py
-===================
 
 Sweep the rolling-window length under the supervised classifier.
 
 Run
+
     python cnn_window_sweep.py
 """
 import argparse

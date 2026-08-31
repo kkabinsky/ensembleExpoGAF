@@ -1,13 +1,12 @@
 # -*- coding: utf-8 -*-
 """
 window_size_check.py
-====================
 
 Sweep the rolling-window length under the one-class scorer.
 
 Run
+
     python window_size_check.py
-    python window_size_check.py --threads 4
 """
 import argparse
 import io

@@ -1,9 +1,8 @@
 # -*- coding: utf-8 -*-
 """
 models.py
-=========
 
-Network definitions and the training loop shared by the ablation programs.
+Network definitions and training loop shared by the ablation programs.
 
 Run
 

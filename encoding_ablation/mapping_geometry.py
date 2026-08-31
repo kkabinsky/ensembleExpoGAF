@@ -1,15 +1,12 @@
 # -*- coding: utf-8 -*-
 """
 mapping_geometry.py
-===================
 
-Measure the geometry of the four angular mappings on the scored windows.
+Measured geometry of the four angular mappings on the scored windows.
 
-Run from inside this folder:
+Run
 
     python mapping_geometry.py
-
-Writes ``output/mapping_geometry.csv`` and prints a LaTeX table body.
 """
 import os
 

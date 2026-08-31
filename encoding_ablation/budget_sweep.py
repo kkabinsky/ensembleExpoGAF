@@ -1,21 +1,12 @@
 # -*- coding: utf-8 -*-
 """
 budget_sweep.py
-===============
 
-Repeat the encoding comparison at several training budgets.
-
-run produced the clean answer; the same sweep on the adversarial arms costs
-hours rather than minutes and can be run with `--arm fanogan_compact`.
-
-Stopping and resuming
-    Every finished cell is written immediately. Interrupt it and rerun the same
-    command: it continues from the next unfinished cell.
-
+Encoding comparison repeated at several training budgets.
 
 Run
+
     python budget_sweep.py
-    python budget_sweep.py --budgets 3,5,10,20,40 --seeds 3
 """
 import argparse
 import os

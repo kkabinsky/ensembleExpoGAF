@@ -1,18 +1,12 @@
 # -*- coding: utf-8 -*-
 """
 plot_backtest_new.py
-====================
 
-Draw the per-episode bar figures from the backtest output.
-
-Outputs, all under output/
-    backtest_bar_<event>_new.png and .pdf    one figure per episode
-    iran_2025_2026_<rule>_6panels_new.pdf    the replacement for Figure 3
-
+Per-episode bar figures from the backtest output.
 
 Run
+
     python plot_backtest_new.py
-    python plot_backtest_new.py --strategy defensive --mode "as reported"
 """
 import argparse
 import os

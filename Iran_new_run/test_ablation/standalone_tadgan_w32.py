@@ -1,47 +1,11 @@
 # -*- coding: utf-8 -*-
 """
 standalone_tadgan_w32.py
-========================
 
 Score the TadGAN front end alone at window length 32.
 
-Run the standalone TadGAN arm at window 32 so that it is comparable with every
-other arm.
-
-Why it had to be rerun
-    The stored standalone TadGAN arm used windows of 100 observations while
-    every other arm uses 32. Under the event-overlap labelling rule a longer
-    window is labelled positive more readily, so the two carried different
-    positive counts: 94 against 74 for COVID-19 EURUSD, for example. An AUC
-    computed against one label set cannot be compared with an AUC computed
-    against another.
-
-    Here the window positions, the labels and the train/test split are the same
-    as every other arm; only the scoring rule differs.
-
-Nothing is trained
-    The TadGAN per-step scores are already cached, so this arm only reduces the
-    32 scores inside a window to a single number. There is no randomness and no
-    seed.
-
-Two reduction rules, reported side by side rather than chosen between
-    mean   the average of the scores in the window
-    max    the largest score in the window
-
-The drift control, which is the important part
-----------------------------------------------
-The earlier window-100 arm produced AUC values of exactly 0.000 and exactly
-1.000, because its score was a near-monotone function of time while an event
-interval is a contiguous block. A control is therefore included:
-
-    time_index   scores a window by its position in the test period and looks
-                 at no market data at all
-
-If a detector does not beat that control, what it has captured is the passage
-of time, not market stress, and its figure must not be reported as detection.
-
-
 Run
+
     python standalone_tadgan_w32.py
 """
 import io

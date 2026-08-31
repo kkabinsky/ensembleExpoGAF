@@ -1,17 +1,12 @@
 # -*- coding: utf-8 -*-
 """
 run_ablation.py
-===============
 
-Run the encoding ablation over the four mappings and the comparison arms.
+Encoding ablation over the four mappings and the comparison arms.
 
 Run
-    python run_ablation.py                          five epochs, one seed
-    python run_ablation.py --epochs 20 --seeds 3    the full setting
-    python run_ablation.py --arms probe,mean_distance,contrast   exact only
 
-Stopping it part way is safe: rerun the same command and it continues from the
-rows already in the output file.
+    python run_ablation.py
 """
 import argparse
 import os

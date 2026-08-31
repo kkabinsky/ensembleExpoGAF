@@ -1,4 +1,4 @@
-# ExpoGAF-AnoNet — code and data for the revised submission
+# ExpoGAF-AnoNet
 
 Code and result files for:
 
@@ -7,12 +7,9 @@ Code and result files for:
 > Periods**
 > Kabin Kanjamapornkul and Theepakorn Jithitikulchai
 > Faculty of Economics, Thammasat University
-> *Iran Journal of Computer Science*, submission
-> `f28943da-999b-4682-92be-d4c1f9b78031`.
 
-Everything needed to reproduce every number in the manuscript: the model code,
-the analysis code, the per-window scores, and the price series. Clone it and the
-analysis programs run without editing a path.
+The model code, the analysis code, the per-window scores and the price series.
+Clone it and the analysis programs run without editing a path.
 
 ## Layout
 
@@ -27,16 +24,13 @@ Iran_new_run/
   datasets/, datasets_2026/       daily prices for USOIL, GOLD, EURUSD
   results*/                       per-window scores, one folder per episode
   covid_normal/results/           the crash-free 2019 control
-  run_pr_auc/, test_ablation/     analysis programs that live beside the data
-test_cnn/                         the window and mapping sweeps
-sensitivity_runs/                 threshold, seed, overlap, bootstrap and DM
-                                  correction; each writes to output/
-encoding_ablation/                the six-arm encoding ablation, the budget and
-                                  lambda sweeps, and the mapping geometry and
-                                  its closed-form derivation
-backtest_new/                     the financial evaluation on the corrected
-                                  alarm-to-price alignment, and its figures
-outputs/                          the result tables the manuscript quotes
+  run_pr_auc/, test_ablation/     analysis programs beside the data
+test_cnn/                         window and mapping sweeps
+sensitivity_runs/                 threshold, seed, overlap, bootstrap, DM
+encoding_ablation/                encoding ablation, budget and lambda sweeps,
+                                  mapping geometry and its derivation
+backtest_new/                     financial evaluation and its figures
+outputs/                          result tables
 *.py at the root                  the remaining analysis programs
 ```
 
@@ -49,39 +43,19 @@ python Iran_new_run/run_pr_auc/pr_auc_all_datasets_new.py
 ```
 
 Python 3.10 or newer. Set `ALLOW_CPU=1` if no GPU is present. Each program
-writes its tables next to itself; compare them with the reference copies in
-`outputs/`.
+states in its own header what it reads, what it writes and how to run it.
 
-`RUNBOOK.md` lists, for every program, what it reads, what it writes and the
-figures it should print. `outputs/results_tables_v15.xlsx` holds the result
-tables in one workbook, with an INDEX sheet naming where each appears.
+Programs that read stored scores are exactly reproducible: run them from a
+clean clone and the output matches the copy in `outputs/`.
+`cnn_window_sweep.py`, `window_size_check.py` and `dm_test_mappings.py` retrain
+a network and will differ in the last decimals on different hardware.
 
-## Reproducibility
+`outputs/results_tables_v15.xlsx` holds the result tables in one workbook, with
+an INDEX sheet.
 
-Eight of the eleven analysis programs read stored scores and are exactly
-reproducible: run them from a clean clone and every output file matches the copy
-in `outputs/` cell for cell. This was checked before deposit and all eight agree,
-as do the 88 figures the manuscript and the response letters quote.
-
-Three programs retrain a network — `cnn_window_sweep.py`,
-`window_size_check.py` and `dm_test_mappings.py` — and will differ in the last
-decimals on different hardware. The copies in `outputs/` are the runs the
-manuscript quotes.
-
-**Do not edit the `PAPER_METHODS` set** in `supplementary_metrics.py`,
-`brier_decomposition.py` or `leadtime_far_matched.py`. Those programs used to
-discover detectors by listing directories, which meant the tables changed when
-any new run was added: the detector count went from thirteen to fifteen and the
-event-positive count rose by one in twelve of the fifteen cells. The pinned set
-is what keeps the output matching the manuscript.
-
-## What the programs compute
-
-The Diebold-Mariano statistics use a Newey-West long-run standard error at lag 31,
-because adjacent windows share 31 of their 32 observations, and the Holm step-down
-adjustment across all 45 pairs. Lead time is compared with every detector calibrated
-to a common false-alarm rate on a crash-free control. The layered and standalone
-arms are trained separately so that the two are different models.
+Do not edit the `PAPER_METHODS` set in `supplementary_metrics.py`,
+`brier_decomposition.py` or `leadtime_far_matched.py`. The detector list and the
+event-positive counts depend on it.
 
 ## Licence
 

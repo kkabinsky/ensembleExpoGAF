@@ -1,21 +1,11 @@
 # -*- coding: utf-8 -*-
 """
 pr_auc_all_datasets_new.py
-==========================
 
-Compute average precision for every method on every asset-episode cell.
-
-Inputs
-------
-    ensembleExpoGAF/data/aligned_probabilities_9methods.csv      nine methods
-    ensembleExpoGAF/data/aligned_hard_predictions_10methods.csv  prob_ENS
-
-The two files are aligned row for row, so they can be joined directly. As a
-check, prob_ENS gives AP 0.7919 on COVID-19 USOIL, which matches the 0.792
-reported for that cell.
-
+Average precision for every method on every asset-episode cell.
 
 Run
+
     python pr_auc_all_datasets_new.py
 """
 import io

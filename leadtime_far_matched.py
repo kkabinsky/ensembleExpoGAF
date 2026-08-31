@@ -1,13 +1,12 @@
 # -*- coding: utf-8 -*-
 """
 leadtime_far_matched.py
-=======================
 
-Compare lead time with every detector held to a common false-alarm rate.
+Lead time with every detector held to a common false-alarm rate.
 
 Run
+
     python leadtime_far_matched.py
-    python leadtime_far_matched.py --far 0.05 --k 2
 """
 import argparse
 import glob
