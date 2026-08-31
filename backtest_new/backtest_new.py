@@ -333,7 +333,7 @@ def main():
     print("  backtest_new_cells.csv   every mode, rule and detector")
     print("  bar_values_new.csv       the value behind every bar (%s, %s)"
           % (a.headline, a.headline_mode))
-    print("  table_financial_new.tex  the replacement for Table 3")
+    print("  table_financial_new.tex  the financial table in LaTeX")
 
 
 def check_published(t):

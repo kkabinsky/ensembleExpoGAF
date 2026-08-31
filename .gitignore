@@ -4,9 +4,6 @@ __pycache__/
 *.log
 *.out
 *.tex
-# but the LaTeX table a program writes as its result is a result, not a
-# build artefact, so it is kept
-!backtest_new/output/table_financial_new.tex
 *.synctex.gz
 verify_all.csv
 
